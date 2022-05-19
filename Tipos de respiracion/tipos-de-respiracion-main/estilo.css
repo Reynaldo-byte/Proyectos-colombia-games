@@ -1,0 +1,71 @@
+h2,h1{
+	color: darkred;
+}
+h1{
+	font-size: 3rem;
+}
+h2{
+	font-size: 2rem;
+}
+p{
+	font-size: 1.5rem;
+}
+div{
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.5);
+	padding: 1rem;
+	background-size: cover;
+	border-radius: 1rem;
+}
+img:hover{
+opacity: 80%;
+}
+body{
+	text-align: center;
+	background-image:url('recursos/fondo.png') ;
+	background-size: 100%;
+}
+
+         button{background-image: linear-gradient(to right, #D1913C 0%, #FFD194  51%, #D1913C  100%)}
+         button{
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;  
+            font-size: 1.3rem;          
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            
+          }
+
+          button:hover {
+          	font-size: 1.8rem;
+            background-position: right center; /* change the direction of the change here */
+            color: black;
+            text-decoration: none;
+          }
+ #aviso-movil-horizontal { display: none; }
+    @media only screen and (orientation:portrait) {
+       #contenido,#inicio{ display:none; }
+        #aviso-movil-horizontal { 
+          margin-top: 20%;
+          z-index=0;
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;
+                
+                background-color: rgba(255, 255, 255, 0.5);}
+                img{
+
+
+
+                }
+      
+    }
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }

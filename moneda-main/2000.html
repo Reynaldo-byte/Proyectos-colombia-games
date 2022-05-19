@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<script src="200.js"></script>
+	<div id="anverso" >
+		<img id="2000_img" src="2000/anverso.png" style="position: relative;z-index: 0;width: 100%;">
+
+
+
+		<button id="toque_1" class="toque" onclick="toque(4)" style="margin-top: 2%;
+    	left: 3%;position: absolute;z-index: 1;">+</button>
+		<button id="toque_2" style="margin-top: 40%;
+    	left: 3%;position: absolute;z-index: 2;" class="toque" onclick="toque(6)">+</button>
+		<button id="toque_3"  style="margin-top: 40%;
+    	left: 6%;position: absolute;z-index: 3;" class="toque" onclick="toque(5)">+</button>
+    	<button id="toque_4" class="toque" onclick="toque(3)" style="margin-top: 2%;
+    	left: 90%;position: absolute;z-index: 1;" >+</button>
+		<button id="toque_5" style="margin-top: 10%;
+    	left: 50%;position: absolute;z-index: 2;" class="toque" onclick="toque(1)">+</button>
+		<button id="toque_6"  style="margin-top: 30%;
+    	left: 65%;position: absolute;z-index: 3;" class="toque" onclick="toque(2)">+</button>
+    	<button id="toque_7"  style="margin-top: 30%;
+    	left: 95%;position: absolute;z-index: 3;" class="toque" onclick="toque(7)">+</button>
+		
+	
+		<button id="levante_1" class="levante" onclick="levante(2)" style="margin-top: 12%;
+    	left: 3%;position: absolute;z-index: 4;">+</button>
+		<button id="levante_2" onclick="levante(3)" class="levante" style="margin-top: 17%;
+    	left: 3%;position: absolute;z-index: 5;" class="levante">+</button>
+		<button onclick="levante(5)" id="levante_3" class="levante" style="margin-top: 30%;
+    	left: 58%;position: absolute;z-index: 6;" class="levante">+</button>
+    	<button id="gire_1" class="gire" onclick="gire(1)" style="top: 30%;
+    	left:30%;position: absolute;z-index: 7;">+</button>
+		<button id="gire_2" class="gire" onclick="gire(2)" style="top: 30%;
+    	left: 58%;position: absolute;z-index: 8;" class="gire">+</button>
+  		<button id="compruebe_1" class="compruebe" onclick="compruebe(1)" style="top: 1%;
+    	left: 32%;position: absolute;z-index: 7;">+</button>
+		<button id="compruebe_2" class="compruebe" onclick="compruebe(2)" style="top: 2%;
+    	left: 55%;position: absolute;z-index: 8;" >+</button>
+
+	
+	</div>
+	<div style="" id="levante" >
+		<br>
+		<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="levante-2" hidden><br><img src="2000/2levante-1.png"><br>IMÁGENES COINCIDENTES - Al lado izquierdo se observa el texto "BRC", que está impreso parcialmente por anverso y reverso, y se complementa en su totalidad al observarlo al trasluz.<br><button onclick="cerrar('levante-2')">Cerrar</button></p>
+		<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="levante-3" hidden><br><img src="2000/2levante-3.png" ><br>MARCAS DE AGUA - Al lado izquierdo del billete se descubren al trasluz el rostro de la artista, con efecto tridimensional, y el número "2".<br><button onclick="cerrar('levante-3')">Cerrar</button></p></div>
+	
+			<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="levante-4
+			" hidden><img src="2000/2levante-2.png" ><br>IMÁGENES COINCIDENTES - Al mismo lado, al observar al trasluz, la imagen del pájaro cardenal impreso por el anverso se complementa con otro pájaro cardenal, impreso por el reverso.<br><button onclick="cerrar('levante-4')">Cerrar</button></p>
+			<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="levante-5" hidden> <img src="2000/2levante-4.png"><br>CINTA DE SEGURIDAD - Al trasluz se observa la cinta de seguridad que está dentro del papel, en la que se identifica el texto "BRC" y la silueta del pajaro cardenal.<br><button onclick="cerrar('levante-5')">Cerrar</button></p>
+			
+			
+		</div>
+
+		
+	</div>
+	<div  id="toque">
+		
+				<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-1" hidden><br><img src="2000/rostro.png"><br>Rostro y personaje de pie.<br><button onclick="cerrar('toque-1')">Cerrar</button></p>
+				<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-2" hidden><br><img src="2000/2toque-3.png"><br>Textos: "DÉBORA ARANGO PÉREZ (1907-2005)", "BANCO DE LA REPÚBLICA" y "COLOMBIA".<br><button onclick="cerrar('toque-2')">Cerrar</button></p>
+				<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-7" hidden><br><img src="2000/2toque-5.png"><br>Franjas que incorporan figuras geométricas a los lados del rostro.<br><button onclick="cerrar('toque-7')">Cerrar</button></p>
+				<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-3" hidden><br><img src="2000/2toque-7.png"><br>El número dos en sistema braille, en la parte inferior central (levemente a la izquierda).<br><button onclick="cerrar('toque-3')">Cerrar</button></p>
+		
+			<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-4" hidden><img src="2000/2toque-2.png"><br>Texto "2 MIL PESOS", en la esquina superior izquierda.<br><button onclick="cerrar('toque-4')">Cerrar</button></p>
+			<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-5" hidden><img src="2000/2toque-4.png"><br>Firmas del gerente general y del gerente ejecutivo.<br><button onclick="cerrar('toque-5')">Cerrar</button></p>
+			<p style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque-6" hidden><img src="2000/2toque-6.png"><br>En los bordes laterales dos líneas diagonales.<br><button onclick="cerrar('toque-6')">Cerrar</button></p>
+			
+		
+	</div>
+	<div style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="gire" hidden>
+		
+		<p id="gire-1" hidden><img src="2000/2gire-1.png"><br>IMAGEN CON CAMBIO DE COLOR - Las hojas y el fruto del árbol lechoso están impresos en color cobre y al girar el billete el fruto cambia a color verde<br><button onclick="gire_cerrar('1')">Cerrar</button></p>
+		
+			<p id="gire-2" hidden><img src="2000/2gire-2.png"><br>IMAGEN OCULTA (LATENTE) - Al lado izquierdo del rostro, en la franja de color azul, al observar el billete en posición casi horizontal desde la esquina inferior derecha a la altura de los ojos, se visualiza el texto "BRC".<br><button onclick="gire_cerrar('2')">Cerrar</button></p>
+			
+			
+			
+		</div>
+	</div>
+	<div  id="compruebe" >
+			
+		<p id="compruebe-1" style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" hidden><br><img src="2000/2compruebe-5.png"><br>En algunas ondulaciones y figuras geométricas, ubicados a los lados del personaje, se encuentra los textos "BANCO DE LA REPÚBLICA" y "BRC".<br><button onclick="cerrar('compruebe-1')">Cerrar</button></p>
+		
+			<p id="compruebe-2" style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" hidden><br><img src="2000/2compruebe-6.png"><br>Dos líneas verticales de color azul, una a la izquierda del personaje de pie y otra a la derecha del rostro, con el texto "BANCO DE LA REPÚBLICA".<br><button onclick="cerrar('compruebe-2')">Cerrar</button></p>
+			<p id="compruebe-3" style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" hidden><br><img src="2000/2compruebe-10.png"><br>En la parte superior derecha está impreso un fragmento de una entrevista realizada a Débora Arango, tomado del libro Débora en plural <br><button onclick="cerrar('compruebe-3')">Cerrar</button></p>
+				<p id="compruebe-4" style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" hidden><br><img src="2000/2compruebe-11.png"><br>El texto "DOS MIL PESOS", al lado derecho.<br><button onclick="cerrar('compruebe-4')">Cerrar</button></p>
+			
+			
+			
+	
+	</div>
+	<div id="reverso" hidden>
+		<img id="2000_img" src="2000/reverso.png" style="position: relative;z-index: 0;width: 100%;" >
+			<button id="levante_6" class="levante" onclick="levante(2)" style="margin-top: 12%;
+    	left: 90%;position: absolute;z-index: 4;">+</button>
+    			<button onclick="levante(5)" id="levante_4" class="levante" style="margin-top: 30%;
+    	left: 35%;position: absolute;z-index: 6;" class="levante">+</button>
+
+		<button id="toque_8" class="toque" onclick="toque(4)" style="margin-top: 2%;
+    	left: 3%;position: absolute;z-index: 1;">+</button>
+    	<button id="compruebe_8" class="compruebe" onclick="compruebe(3)" style="margin-top: 2%;
+    	left: 80%;position: absolute;z-index: 1;">+</button>
+    	<button id="compruebe_9" class="compruebe" onclick="compruebe(4)" style="margin-top: 25%;
+    	left: 90%;position: absolute;z-index: 1;">+</button>
+	</div>
+	
+	
+	<div id="reverso_uv" hidden>
+		<img id="2000_img" src="2000/reverso_uv.png" style="position: relative;z-index: 0;width: 100%;" >
+
+		
+			
+	</div>
+	<div id="anverso_uv" hidden>
+		<img id="2000_img" src="2000/anverso_uv.png" style="position: relative;z-index: 0;width: 100%;" >
+				        	
+	</div>
+	
+			
+	</div>
+		<button style="position:absolute;z-index: 9;top: 0%;right: 0%;background-color: transparent;border-color: transparent;" onclick="voltear('reverso')" id="voltear"><img src="5000/volt.png" width="110%"></button><button style="position:absolute;z-index: 9;top: 0%;right: 10%;" onclick="uv(1)" id="uv">Ultravioleta</button>
+
+</body>
+</html>

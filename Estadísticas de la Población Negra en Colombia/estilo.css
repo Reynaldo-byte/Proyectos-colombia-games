@@ -1,0 +1,93 @@
+#escoger,#mapa,#buttons{
+	width: 45%;
+	text-align: center;
+	margin: auto;
+}
+#mapa{
+	width: 40%;
+}
+#inicio{
+	margin: auto;
+	background-color: rgba(255, 255, 255, 0.8);
+	background-size: cover;
+	border-radius: 50%;
+}
+#contenido{
+	height: 90vh;
+	text-align: center;
+}
+body{
+	font-family: calibri;
+	background-image: url("recursos/index (3).png");
+
+	background-size: cover;
+}
+#escoger{
+	background-color: rgba(255, 255, 255,0.5);
+	background-size: contain;
+	border-radius: 1rem;
+	margin: auto;
+}
+@media only screen and (orientation:portrait) {
+        #contenido { display:none; }
+        #aviso-movil-horizontal { 
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;}
+		    
+      
+    }
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
+p{
+	font-size: 1.333rem;
+}
+
+	#rojo_1:hover,#amarillo_1:hover,#naranja_1:hover,#verde_1:hover{
+		border-radius: 100%;
+	}
+
+#contexto,#info{
+	text-align: center;
+	margin: auto;
+}
+#rojo,#amarillo,#verde,#naranja,#musica_1,#deporte_1,#politica_1{
+		background-color: rgba(255, 255, 255,0.5);
+	background-size: contain;
+	border-radius: 1rem;
+	margin: auto;
+}
+object{
+	margin: auto;
+}
+#contexto{
+	width: 50%;
+	margin: auto;
+}
+#button{
+	text-align: center;
+}
+button{
+
+           
+      	         background-color: #DAB86E;
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                font-weight: bolder;
+                padding: 3px;
+                border: solid 2px black;
+
+            }
+            button:hover{ /* Estilo que se activa al pasar el puntero sobre el boton */
+                background-color: lightcoral;
+                font-size: 22px;
+                border: groove 4px red;
+            }
+button img:hover{
+transform: scale(1.2);
+}
+

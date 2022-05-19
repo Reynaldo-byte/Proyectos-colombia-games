@@ -1,0 +1,245 @@
+recursos/<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<script type="text/javascript">
+	audio1=new Audio('recursos/i1.mp3')//cutanea
+	audio2=new Audio('recursos/i2.mp3')//traqueal
+	audio3=new Audio('recursos/i3.mp3')//branquial
+	audio4=new Audio('recursos/i4.mp3')//pulmonar
+	function cargar(id) {
+			
+		switch (id){
+			case 1:
+			setTimeout(function j(){document.getElementById("siguiente").removeAttribute('hidden')},31000)
+			document.getElementById('branquial').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			document.getElementById('contenido').removeAttribute('hidden')
+			audio3.play()
+
+
+			break;
+			case 2:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('cutanea').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio1.play()
+			setTimeout(function j(){document.getElementById("siguiente1").removeAttribute('hidden')},29000)
+			break;
+			case 3:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('pulmonar').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio4.play()
+			setTimeout(function j(){document.getElementById("siguiente2").removeAttribute('hidden')},40000)
+			break;
+			case 4:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('traqueal').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio2.play()
+			setTimeout(function j(){document.getElementById("siguiente3").removeAttribute('hidden')},29000)
+			break;			
+		}
+	}
+	function inicio(){
+		document.getElementById('contenido').setAttribute("hidden","")
+		document.getElementById('inicio').removeAttribute("hidden")
+		audio1.pause();
+		audio2.pause();
+		audio3.pause();
+		audio4.pause();
+		audio1.currentTime=0
+		audio2.currentTime=0
+		audio3.currentTime=0
+		audio4.currentTime=0
+document.getElementById('branquial').setAttribute('hidden','')
+document.getElementById('cutanea').setAttribute('hidden','')
+document.getElementById('pulmonar').setAttribute('hidden','')
+document.getElementById('traqueal').setAttribute('hidden','')
+document.getElementById('branquial1').setAttribute('hidden','')
+document.getElementById('cutanea1').setAttribute('hidden','')
+document.getElementById('pulmonar1').setAttribute('hidden','')
+document.getElementById('traqueal1').setAttribute('hidden','')
+	}
+	function siguiente(id){
+				audio1.pause();
+		audio2.pause();
+		audio3.pause();
+		audio4.pause();
+		audio1.currentTime=0
+		audio2.currentTime=0
+		audio3.currentTime=0
+		audio4.currentTime=0
+				switch (id){
+			case 1:
+	document.getElementById('branquial').setAttribute('hidden','')
+			document.getElementById('branquial1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			
+
+			break;
+			case 2:
+			document.getElementById('cutanea1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			document.getElementById('cutanea').setAttribute('hidden','')
+			break;
+			case 3:
+			document.getElementById('pulmonar1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+document.getElementById('pulmonar').setAttribute('hidden','')
+			break;
+			case 4:
+			document.getElementById('traqueal').setAttribute('hidden','')
+			document.getElementById('traqueal1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+
+			break;			
+		}
+	}
+</script>
+<body><meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+
+<script type="text/javascript">
+	audio1=new Audio('recursos/i1.mp3')//cutanea
+	audio2=new Audio('recursos/i2.mp3')//traqueal
+	audio3=new Audio('recursos/i3.mp3')//branquial
+	audio4=new Audio('recursos/i4.mp3')//pulmonar
+	function cargar(id) {
+			
+		switch (id){
+			case 1:
+			setTimeout(function j(){document.getElementById("siguiente").removeAttribute('hidden')},31000)
+			document.getElementById('branquial').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			document.getElementById('contenido').removeAttribute('hidden')
+			audio3.play()
+
+
+			break;
+			case 2:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('cutanea').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio1.play()
+			setTimeout(function j(){document.getElementById("siguiente1").removeAttribute('hidden')},29000)
+			break;
+			case 3:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('pulmonar').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio4.play()
+			setTimeout(function j(){document.getElementById("siguiente2").removeAttribute('hidden')},40000)
+			break;
+			case 4:document.getElementById('contenido').removeAttribute('hidden')
+			document.getElementById('traqueal').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			audio2.play()
+			setTimeout(function j(){document.getElementById("siguiente3").removeAttribute('hidden')},29000)
+			break;			
+		}
+	}
+	function inicio(){
+		document.getElementById('contenido').setAttribute("hidden","")
+		document.getElementById('inicio').removeAttribute("hidden")
+		audio1.pause();
+		audio2.pause();
+		audio3.pause();
+		audio4.pause();
+		audio1.currentTime=0
+		audio2.currentTime=0
+		audio3.currentTime=0
+		audio4.currentTime=0
+document.getElementById('branquial').setAttribute('hidden','')
+document.getElementById('cutanea').setAttribute('hidden','')
+document.getElementById('pulmonar').setAttribute('hidden','')
+document.getElementById('traqueal').setAttribute('hidden','')
+document.getElementById('branquial1').setAttribute('hidden','')
+document.getElementById('cutanea1').setAttribute('hidden','')
+document.getElementById('pulmonar1').setAttribute('hidden','')
+document.getElementById('traqueal1').setAttribute('hidden','')
+	}
+	function siguiente(id){
+				audio1.pause();
+		audio2.pause();
+		audio3.pause();
+		audio4.pause();
+		audio1.currentTime=0
+		audio2.currentTime=0
+		audio3.currentTime=0
+		audio4.currentTime=0
+				switch (id){
+			case 1:
+	document.getElementById('branquial').setAttribute('hidden','')
+			document.getElementById('branquial1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			
+
+			break;
+			case 2:
+			document.getElementById('cutanea1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+			document.getElementById('cutanea').setAttribute('hidden','')
+			break;
+			case 3:
+			document.getElementById('pulmonar1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+document.getElementById('pulmonar').setAttribute('hidden','')
+			break;
+			case 4:
+			document.getElementById('traqueal').setAttribute('hidden','')
+			document.getElementById('traqueal1').removeAttribute('hidden')
+			document.getElementById('inicio').setAttribute('hidden','')
+
+			break;			
+		}
+	}
+</script>
+
+
+		<div style="position: absolute; top: 0px;left: 0px;background-color:transparent;width:fit-content;padding:0px">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+	<h1>Tipos de respiración</h1>
+	<div id="aviso-movil-horizontal">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+    <img src="recursos/rotate.gif"></div>
+	<div id="inicio">
+	<div><img src="recursos/cutanea.png" onclick="cargar(2)"><img src="recursos/branquial.png" onclick="cargar(1)"></div>
+
+	<div><img src="recursos/pulmonar.png" onclick="cargar(3)"><img src="recursos/traqueal.png" onclick="cargar(4)"></div>
+	</div>
+	<div id="contenido" hidden="">
+	<div id="branquial" hidden="">
+	<h2>Respiración Branquial</h2><br>
+		<p>Es propia de animales acuáticos como los peces y los moluscos. Se realiza por medio de órganos llamados <b>branquias</b>. Cada branquia consta de delgadas capas de células epiteliales y capilares sanguíneos.<b> El oxígeno disuelto en el agua pasa a tráves del epitelio al capilar y de allí a la sangre.</b> Los peces producen una corriente de agua al permitir la entrada de ésta por la boca,pasar luego a bañar las branquias y finalmente salir del cuerpo.</p>
+		
+		<button onclick="siguiente(1)" id="siguiente" hidden="">Siguiente</button><button onclick="inicio()">Inicio</button>
+	</div>
+	<div id="cutanea" hidden="">
+			<h2>Respiración Cutánea</h2>
+		<p>Se presenta en animales simples que carecen de un sistema de conductos para transportar el oxígeno.<b> El oxígeno entra directamente a las células por el proceso de difusión.</b> Así mismo, sale el dióxido de carbono al medio. La lombriz de tierra presenta vasos sanguíneos en su piel que sirven para transportar el oxígeno del medio a las demás células y el dióxido de carbono desde las células al medio.</p>
+				<button onclick="siguiente(2)" id="siguiente1">Siguiente</button><br><button onclick="inicio()">Inicio</button>
+	</div>
+	<div id="pulmonar" hidden="">
+		<h2>Respiración Pulmonar</h2>
+		<p>Es propia de los vertebrados terrestres y de algunos invertebrados como los caracoles terrestres y algunas arañas. Los principales órganos encargados de la respiración sin los pulmones. <b>Los pulmones son una especie de cámaras aéreas,</b> revestidas de epitelio y de abundantes capilares sanguíneos. Como la superficie respiratoria no está en contacto co todas las paretes del cuerpo, existe una asociación entre el Sistema respiratorio y el Sistema circulatorio que es el encargado de transportar el oxígeno y el dióxido de carbono entre los pulmones y el resto del cuerpo.</p>
+				<button onclick="siguiente(3)" id="siguiente2" hidden="">Siguiente</button><button onclick="inicio()">Inicio</button>
+	</div>
+	<div id="traqueal" hidden="">
+		<h2>Respiración Traqueal</h2>
+		<p>Es característica de los insectos. El intercambio gaseoso se da a través de unas estructuras en forma de tubos diminutos llamados tráqueas, que se comunican con el exterior del cuerpo a través de orificios muy pequeños llamados espiráculos. Las tráqueas se ramifican en traquéolas.<b>El oxígeno circula entre la tráquea y los tejidos por difusión,</b> e igualmente este mecanismo permite la salida del dióxido de carbono.</p>
+				<button onclick="siguiente(4)" id="siguiente3" hidden="">Siguiente</button><button onclick="inicio()">Inicio</button>
+	</div>
+	<div id="branquial1" hidden="">
+		<h2>Respiración Branquial</h2><img src="recursos/branquial1.png"><br><button onclick="inicio()">Inicio</button></div>
+	<div id="cutanea1" hidden=""><h2>Respiración Cutanea</h2><img src="recursos/cutanea1.png"><br><button onclick="inicio()">Inicio</button></div>
+	<div id="pulmonar1" hidden=""><h2>Respiración Pulmonar</h2><img src="recursos/pulmonar1.png"><br><button onclick="inicio()">Inicio</button></div>
+	<div id="traqueal1" hidden=""><h2>Respiración Traqueal</h2><img src="recursos/traqueal1.png"><br><button onclick="inicio()">Inicio</button></div>
+</div>
+
+
+</body>
+</html>

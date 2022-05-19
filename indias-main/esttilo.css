@@ -1,0 +1,133 @@
+
+@font-face {
+  font-family:Enchanted Land;
+ src: url('recursos/Enchanted Land.otf');
+}
+         button {background-image: linear-gradient(to right, #603813 0%, #b29f94  51%, #603813  100%)}
+         button {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+          
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+   animation-name: square-in-center;
+          animation-duration: 3.5s;
+          }
+
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+          body{
+            text-align: center;
+            background-image: url('recursos/fondo.png');
+            background-size: cover;
+            background-color: rgba(220, 189, 120, 0.35);
+          }
+          h1{
+            font-size: 3.5rem;
+            background-color:rgba(255, 255, 255, 0.6);
+            width: 50%;
+            margin: auto;
+            padding: 1rem;
+            font-weight: bolder;
+                  
+                  z-index:5;
+                           left:25%
+          }
+          p{
+            font-size: 1.5rem;
+            margin: auto;
+          }
+          div div,#pregunta_1,#pregunta_2,#pregunta_3,#pregunta_4,#pregunta_5,#pregunta_6,#pregunta_7,#gana,#intenta{
+                         animation-name: square-in-center;
+          animation-duration: 3s;
+            padding: 1rem;
+            background-color:rgba(227,210,165,.6);
+            background-size: cover;
+                 
+          }
+#inicio{                      position: absolute;
+           margin-left:45%;
+                  z-index:5}
+         
+          .opciones{
+            background-color: transparent;
+          }
+          #puntaje{
+                   margin-top:12%;
+                  
+            background-image: url('recursos/botin.png');
+            padding: 1rem;
+            font-size: 1.5rem;
+                          position:absolute;
+          }
+          #puntaje p{
+                   
+            margin: auto;
+            font-size: 1.5rem;
+          }
+          #gana,#intenta{
+            font-size: 1.5rem;
+          }
+         #pregunta_1,#pregunta_2,#pregunta_3,#pregunta_4,#pregunta_5,#pregunta_6,#pregunta_7,#gana,#intenta{
+          
+                      left: 19.4%;
+          width: 55%;
+          position:absolute;
+                  z-index:6;
+         }
+
+
+         #mapa{
+         width: 57%;
+          left: 20%;
+        
+         position: absolute;
+                  z-index:5
+         }
+         .dis-n{
+          display: none;
+         }
+         .dis-b{
+          display: block;
+         }
+             #aviso-movil-horizontal { display: none; }
+    @media only screen and (orientation:portrait) {
+       #pregunta_1,#pregunta_2,#pregunta_3,#pregunta_4,#pregunta_5,#pregunta_6,#pregunta_7,#gana,#intenta,#inicio,h1 { display:none; }
+        #aviso-movil-horizontal { 
+          margin-top: 4%;
+          z-index=0;
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;
+                
+                background-color: rgba(255, 255, 255, 0.5);}
+                img{
+
+
+
+                }
+      
+    }
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
+    @keyframes square-in-center {
+  from {
+    clip-path: inset(100% 100% 100% 100%);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+[transition-style="in:square:center"] {
+  animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-in-center both;
+}

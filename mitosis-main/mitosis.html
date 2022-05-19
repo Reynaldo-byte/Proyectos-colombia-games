@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+		<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<script src="script.js"></script>
+<body>
+	<div style="position: absolute; top: 0px;background-color: transparent;padding: 0px;">
+      <img src="img-foot.png" alt="logo: escuela nueva">
+    </div>
+    <h2>Mitosis: Preguntas de recuperación</h2>
+      <h3>Ten en cuenta que sólo podras avanzar cuando respondas correctamente</h3>
+    <div id="pregunta_0">    <video src="recursos/mitosis.mp4" id="video" controls></video><br>
+    <button onclick='avanzar()' id="avance_0">Avanzar</button></div>
+<div id="pregunta_1" hidden>
+	<p class="preguntas">¿Cuántos cromosomas tiene la célula madre justo antes de que ocurra la división?</p>
+	<button onclick="respuestas('incorrecta',1)" id="incorrecta1" class="respuestas">
+		Dos
+	</button>
+		<button onclick="respuestas('correcta',1)"  id="correcta1" class="respuestas">
+		Cuatro
+	</button>
+		<button onclick="respuestas('incorrecta',2)"  id="incorrecta2" class="respuestas">
+		Ocho
+	</button><br>
+	<button onclick='avanzar()' id="avance_1" hidden>Avanzar</button>
+</div>
+<div id="pregunta_2" hidden>
+	<p class="preguntas">¿Cuántas células hijas resultan de esta división?</p>
+	<button onclick="respuestas('correcta',2)"  id="correcta2" class="respuestas">
+		Dos
+	</button>
+		<button onclick="respuestas('incorrecta',3)"  id="incorrecta3" class="respuestas">
+		Cuatro
+	</button>
+		<button onclick="respuestas('incorrecta',4)"  id="incorrecta4" class="respuestas">
+		Ocho
+	</button><br>
+	<button onclick='avanzar()' id="avance_2" hidden>Avanzar</button>
+</div>
+<div id="pregunta_3" hidden>
+	<p class="preguntas">¿Cuántos cromosomas teienen las células hijas resultantes de esta división?</p>
+	<button onclick="respuestas('incorrecta',5)"  id="incorrecta5"  class="respuestas">
+		Dos
+	</button>
+		<button onclick="respuestas('correcta',3)"  id="correcta3" class="respuestas">
+		Cuatro
+	</button>
+		<button onclick="respuestas('incorrecta',6)"  id="incorrecta6"  class="respuestas">
+		Ocho
+	</button><br>
+	<button onclick='avanzar()' id="avance_3" hidden>Avanzar</button>
+</div>
+<div id="pregunta_4" hidden>
+	<h3>Conclusión</h3>
+	<p class="preguntas">Se reduce en las células hijas el número de cromosomas con respecto a la célula madre</p>
+	<br>
+	<button onclick='window.location.assign("index.html")' id="avance_4">Inicio</button>
+</div>
+</body>
+</html>

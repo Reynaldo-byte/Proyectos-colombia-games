@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+        <script type="text/javascript">
+        const audio = document.createElement("audio");
+audio.preload = "auto";
+audio.src = "recursos/35.mp3";
+
+const audio2 = document.createElement("audio");
+audio2.preload = "auto";
+audio2.src = "recursos/62.mp3";
+const audio3 = document.createElement("audio");
+audio3.preload = "auto";
+audio3.src = "recursos/36.mp3";
+
+    </script>
+        <div style="position: absolute; top: 0px;">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>  <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+            <p> <br><br>Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+                <img width="100%" src="recursos/rotate.gif"/></div>
+	<div id="contenido" onmouseover="audio2.play();audio2.loop='true'">
+		<div id="inicio"><h1>Climas de Asia</h1>
+            <br><img id="inicio_" src="recursos/comienzo.gif"><br>
+            <button id="button" onclick="inicio()" onmouseover="audio3.play()">Comenzar</button></div>
+		<div id="contexto"  style="float:left;" hidden>
+			<object type="image/svg+xml" data="recursos/0.svg" onload="init()" id="mapa" class="responsive-imagen" >
+                      
+                    </object>
+
+		</div>
+		<div id="texto" style="float:right;">
+			<div id="tundra" style="display: none;"><img src="recursos/tundra.gif"><br><p>Esta región natural se caracteriza por tener inviernos muy fríos con pocas precipitaciones y veranos templados pero lluviosos. temperaturas de hasta -50° bajo cero.</p></div>
+			<div id="subtropical" style="display:none"><img src="recursos/subtropical.gif"><br><p>Esta región se caracteriza por veranos cálidos e inviernos templados. Las lluvias son escasas durante el año presentando una máxima concentración en invierno. Recibe influencia del Océano Atlántico.</p></div>
+			<div id="pradera" style="display:none"><img src="recursos/pradera.gif"><br><p>Esta región se caracteriza por tener lluvias irregulares, temperaturas suaves en invierno y cálidas en verano. Se encuentra en las costas penínsulares de <b>Anatolia, Siria y Palestina.</b></p></div>
+			<div id="desierto" style="display:none"><img src="recursos/desierto.gif"><br><p>En esta región las lluvias o precipitaciones son escasas. Se da en oriente próximo, <b>la península Arábiga, Irán y parte de Asia central</b>. En algunas zonas altas el clima de los desiertos como el desierto de Gobi puede ser frío pero muy escaso de lluvias.</p></div>
+			<div id="coniferas" style="display:none"><img src="recursos/coniferas.gif"><p>Es una región caracterizada por bajas temperaturas en zonas de altas montañas y mesetas. Fuertes, secos y frìos vientos.</p></div>
+			<div id="bosque" style="display:none"><img src="recursos/bosque.gif"><br><p>El desplazamiento de las masas de aire desde el océano hasta el continente en verano y en sentido contrario en el invierno, ocasionan las lluvias estacionales y producen humedad que favorece enormemente las zonas destinadas para los cultivos.</p></div>
+            <div id="humedo"  style="display:none"><img src="recursos/humedo.gif"><br><p>Es un clima cálido acompañado de abundantes lluvias que se extienden por el sudeste asiático e insular</p></div>
+		</div>
+	</div>
+<script type="text/javascript">
+    function inicio() {
+        document.getElementById("inicio_").setAttribute("hidden","");
+        document.getElementById("button").setAttribute("hidden","");
+        document.getElementById("contexto").removeAttribute("hidden");
+        // body...
+    }
+function init() {
+			let video;
+let paisesMapa;
+let elementosDomSvg;
+let colorOriginal;
+let rutaAnimacion;
+let contenedorImagen;
+let documento;
+    let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+     documento = elementosSvg;
+
+    paisesMapa = [
+      elementosSvg.getElementById("_x31__00000100382003029440498940000002238020571755042177_"),
+         elementosSvg.getElementById("_x32_"),
+        elementosSvg.getElementById("_x33_"),
+         elementosSvg.getElementById("_x34_"),
+         elementosSvg.getElementById("_x35_"),
+         elementosSvg.getElementById("_x31_"),
+         elementosSvg.getElementById("_x37_")
+    ]
+    paisesMapa.forEach(pais => {
+        pais.addEventListener('mouseover', overMapa, false);
+  pais.addEventListener('mouseout', outMapa, false);
+	//pais.addEventListener('click',MostrarAnimacion,false);
+        pais.style.cursor = 'pointer';})
+
+}
+function overMapa(e) {
+    colorOriginal = e.path[0].style.fill
+    e.path[0].style.filter='brightness(1.3)'
+ colorOriginal = e.path[1].style.fill
+    e.path[1].style.filter='brightness(1.3)'
+    console.log(e.target.parentNode.id)
+MostrarOculto(e.target.parentNode.id,1)
+}
+
+
+function outMapa(e) {
+    e.path[0].style.fill = colorOriginal
+    e.path[0].style.filter='none'
+  e.path[1].style.fill = colorOriginal
+    e.path[1].style.filter='none'
+    MostrarOculto(e.target.parentNode.id,0)
+ 
+}
+function MostrarOculto(id, visible) {
+	audio2.play();
+let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+    let estado = visible == 1 ? "block" : "none"
+    switch (id) {
+        case '_x32_':
+
+             document.getElementById("tundra").style.display=estado;
+	
+            break;
+        case '_x33_':
+    document.getElementById("subtropical").style.display=estado
+
+            break;
+        case '_x31__00000100382003029440498940000002238020571755042177_':
+document.getElementById("coniferas").style.display=estado
+
+
+
+            break;
+        case '_x35_':
+document.getElementById("pradera").style.display=estado
+
+            break;
+        case '_x31_':
+document.getElementById("desierto").style.display=estado
+
+            break;
+        case '_x34_':
+document.getElementById("bosque").style.display=estado
+		    
+		    break;
+        case '_x37_':
+document.getElementById("humedo").style.display=estado
+            break;
+
+        default:
+            break;
+    }}
+</script>
+</body>
+</html>

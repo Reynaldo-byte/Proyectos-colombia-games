@@ -1,0 +1,50 @@
+    button{
+
+           
+      	         background-color: mediumaquamarine;
+                color: white;
+                font-size: 1.5rem;
+                text-align: center;
+                font-weight: bolder;
+                padding: 3px;
+                border: solid 2px black;
+
+            }
+            button:hover{ /* Estilo que se activa al pasar el puntero sobre el boton */
+                background-color: lightcoral;
+                font-size: 1.8rem;
+                border: groove 4px red;
+            }
+
+body{
+    font-family: calibri;
+background-color: #d4c9e4;
+background-image: url("recursos/universo.jpg");
+background-size: 100%;
+}
+
+#titulo{
+    font-size: 2.5rem;
+    font-weight:bolder;
+    color: white;
+}
+#archivos{
+    background-color: rgba(255,255,255,0.5);
+    border-radius:1rem ;
+
+}
+#contenido{
+    height: 90vh;
+
+
+
+}
+#instruccion{
+    font-size: 1.3rem;
+
+}
+#archivos,#titulo{
+        margin: auto;
+    text-align: center;
+    width: 80%;
+}

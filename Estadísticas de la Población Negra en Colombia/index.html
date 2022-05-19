@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body >
+	<script type="text/javascript">
+		const audio = document.createElement("audio");
+audio.preload = "auto";
+audio.src = "recursos/35.mp3";
+
+const audio2 = document.createElement("audio");
+audio2.preload = "auto";
+audio2.src = "recursos/62.mp3";
+const audio3 = document.createElement("audio");
+audio3.preload = "auto";
+audio3.src = "recursos/36.mp3";
+
+	</script>
+	<div style="position: absolute; top: 0px;">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>  <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+			<p> <br><br>Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img width="100%" src="recursosrotate.gif"/></div>
+	<div id="contenido" onmouseover="audio2.play();audio2.loop='true'">
+		<div id="inicio"><h1><br>Población Afrocolombiana: Estadísticas</h1><img id="texto" src="recursos/comienzo.gif">		<button onmouseover="audio.play()"  id="comenzar" onclick="comenzar();"> Comenzar</button></div>
+		  
+<object type="image/svg+xml" data="recursos/5.svg" onload="init()"id="mapa" class="responsive-imagen" style="display:none;" width="45%">
+                      
+                    </object>
+		<div id="contexto" style="float:left;width: 45%;">
+			<div id="naranja" hidden><p> En los departamentos de <b>Sucre y Nariño</b> el porcentaje le población afrocolombiana se encuentra entre el <b>16%</b> y <b>20%</b></p></div>
+			<div id="verde" hidden><p>En los departamentos de <b>Norte de Santander, Boyacá, Arauca, Casanare,Vichada, Guaniía, Vaupés, Meta,Amazonas, Caquetá, Huila, Quindío, Tolima, Caldas, Cundinamarca y Santander</b> el porcentaje de población afrocolombiana es menor al <b>5%</b>.</p></div>
+			<div id="amarillo" hidden><p>En los departamentos de <b>Guajira, Magdalena, Cesar, Atlántico, Córdoba, Antioquia, Risaralda, Guaviare y Putumayo</b> el porcentaje de población afrocolombiana se encuentra entre el <b>6%</b> y el <b>15%</b></p></div>
+		<div id="rojo" hidden><p>En los departamentos de <b>Bolivar, Chocó, Valle del Cauca y Cauca</b> el porcentaje de población afrocolombiana se encuentra entre el <b>21% y el 74%</b></p></div>
+		</div>
+
+		<div id="buttons" style="float:left">
+			<div id="escoger"  hidden>
+		
+			<l onmouseover="cambiar3();audio3.play()" onclick="departamento3()"style="background-color: rgb(148, 25, 11);" id="rojo_1">&nbsp&nbsp&nbsp</l><b> 21% - 74%</b><br><br>
+			<l onmouseover="cambiar4();audio3.play()" onclick="departamento4()"style="background-color: rgb(248, 99, 11);" id="verde_1">&nbsp&nbsp&nbsp</l><b> 16% - 20%</b><br><br>
+			<l onmouseover="cambiar2();audio3.play()" onclick="departamento2()"style="background-color: rgb(245, 193, 48);" id="amarillo_1">&nbsp&nbsp&nbsp</l><b>&nbsp&nbsp&nbsp6% - 15%</b><br><br>
+			<l onmouseover="cambiar1();audio3.play()" onclick="departamento1()" style="background-color: rgb(149, 171, 11);" id="naranja_1">&nbsp&nbsp&nbsp</l><b>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<= 5%</b>
+		</div>
+		<button onmouseover="audio.play()"  id="siguiente" onclick="siguiente()" hidden>Siguiente</button>
+
+		<button onmouseover="audio.play()"  id="atras" onclick="atras()" hidden>Atras</button><br>
+		<button onmouseover="audio.play()"  id="deporte" onclick="deporte()" style="background:transparent;border-color:transparent;" hidden><img src="recursos/deporte0001.png"></button>
+		<button onmouseover="audio.play()"  id="politica" onclick="politica()" style="background:transparent;border-color:transparent;"  hidden><img src="recursos/politica0001.png"></button>
+		<button onmouseover="audio.play()"  id="musica" onclick="musica()" style="background:transparent;border-color:transparent;" hidden><img src="recursos/musica0001.png"></button><br>
+			<div id="info" >
+			<div id="deporte_1" hidden><p>Algunos de los mejores deportistas colombianos han sido afrodescendientes. La levantadora de pesas <b>María Isabel Urrutia</b>. <b>Willington Ortiz, Faustino Asprilla, Francisco Maturana</b> entre otros, fueron futbolistas reconocidos internacionalmente. Kid Pambelé, Rodrigo Valdés entre otros, fueron campeones mundiales de boxeo.<br><img src="Animar 6.png"  style="width:50%"></p></div>
+			<div id="musica_1" hidden><p>A la música colombiana han contribuido géneros tan importantes como la cumbia, el vallenato, el currulao y la champeta. Entre los músicos afrocolombianos se destacan <b>Joe Arroyo</b>, <b>Piper Pimienta</b>, <b>Alejandro Durán</b>, <b>Totó la Momposina</b>, <b>Toña la Negra</b>, <b>Calixto Ochoa</b> y <b>Alexis Lozano</b><br><img src="Animar 7.png" style="width:50%"></p></div>
+			<div id="politica_1" hidden><p>En el campo de la política se destaca la ex-senadora <b>Piedad Córdoba</b>, <b>la deportista María Isabel Urrutia</b> elegida como representante de los afrocolombianos en la Cámara de Representantes, la ex ministra de cultura <b>Paula Marcela Moreno Zapata</b>, también el comentarista deportivo y político, <b>Edgar Perea</b><br><img src="Animar 8.png"  style="width:50%"></p></div>
+		</div>
+		</div>	
+		
+	</div>
+	<script type="text/javascript">
+		function init() {
+			let video;
+let paisesMapa;
+let elementosDomSvg;
+let colorOriginal;
+let rutaAnimacion;
+let contenedorImagen;
+let documento;
+    let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+     documento = elementosSvg;
+ 
+   
+     elementosSvg.getElementById("ciudades_x5F_amarillo").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_rojo").style.display="none";
+elementosSvg.getElementById("ciudadades_x5F_naranja").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_verde").style.display="none";
+    paisesMapa = [
+      elementosSvg.getElementById("verde_00000021837095109837547290000003721790660256164274_"),
+         elementosSvg.getElementById("amarillo"),
+        elementosSvg.getElementById("rojo"),
+         elementosSvg.getElementById("naranja")
+    ]
+    paisesMapa.forEach(pais => {
+        pais.addEventListener('mouseover', overMapa, false);
+  pais.addEventListener('mouseout', outMapa, false);
+
+        pais.style.cursor = 'pointer';})
+
+     elementosSvg.getElementById("verde_00000021837095109837547290000003721790660256164274_").addEventListener('click',MostrarAnimacion,false);
+         elementosSvg.getElementById("amarillo").addEventListener('click',MostrarAnimacion,false);
+        elementosSvg.getElementById("rojo").addEventListener('click',MostrarAnimacion,false);
+         elementosSvg.getElementById("naranja").addEventListener('click',MostrarAnimacion,false);
+		elementosSvg.getElementById("ciudades_x5F_amarillo").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudades_x5F_rojo").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudadades_x5F_naranja").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudades_x5F_verde").addEventListener('click',MostrarAnimacion,false);}
+function MostrarAnimacion(e){
+ let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+let id=e.target.parentNode.id;
+
+switch (id) {
+        case 'ciudades_x5F_verde':
+			document.getElementById("verde").removeAttribute("hidden");
+
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+
+
+	
+            break;
+        case 'ciudades_x5F_amarillo':
+document.getElementById("amarillo").removeAttribute("hidden");
+
+			document.getElementById("verde").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+
+
+            break;
+        case 'ciudades_x5F_rojo':
+
+			document.getElementById("rojo").removeAttribute("hidden");
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+
+
+            break;
+        case 'ciudadades_x5F_naranja':
+       document.getElementById("rojo").setAttribute("hidden","");
+
+			document.getElementById("naranja").removeAttribute("hidden");
+				document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+
+
+            break;
+        case 'verde_00000021837095109837547290000003721790660256164274_':
+			document.getElementById("verde").removeAttribute("hidden");
+
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+
+
+	
+            break;
+        case 'amarillo':
+document.getElementById("amarillo").removeAttribute("hidden");
+
+			document.getElementById("verde").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+
+
+            break;
+        case 'rojo':
+
+			document.getElementById("rojo").removeAttribute("hidden");
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+
+
+            break;
+        case 'naranja':
+       document.getElementById("rojo").setAttribute("hidden","");
+
+			document.getElementById("naranja").removeAttribute("hidden");
+						document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+
+
+            break;
+
+        default:
+            break;
+    }
+
+
+}
+function MostrarOculto(id, visible) {
+let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+    let estado = visible == 1 ? "block" : "none"
+    switch (id) {
+        case 'verde_00000021837095109837547290000003721790660256164274_':
+
+             elementosSvg.getElementById("ciudades_x5F_verde").style.display=estado;
+
+	document.getElementById("verde").removeAttribute("hidden");
+
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+            break;
+        case 'amarillo':
+     elementosSvg.getElementById("ciudades_x5F_amarillo").style.display=estado
+			 elementosSvg.getElementById("ciudades_x5F_amarillo").addEventListener('click',MostrarAnimacion,false);
+
+document.getElementById("amarillo").removeAttribute("hidden");
+
+			document.getElementById("verde").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+            break;
+        case 'rojo':
+
+elementosSvg.getElementById("ciudades_x5F_rojo").style.display=estado
+			document.getElementById("rojo").removeAttribute("hidden");
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+
+            break;
+        case 'naranja':
+elementosSvg.getElementById("ciudadades_x5F_naranja").style.display=estado
+       document.getElementById("rojo").setAttribute("hidden","");
+
+			document.getElementById("naranja").removeAttribute("hidden");
+						document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+            break;
+
+
+        default:
+            break;
+    }}
+
+function overMapa(e) {
+    colorOriginal = e.path[0].style.fill
+    e.path[0].style.filter='brightness(1.5)'
+ colorOriginal = e.path[1].style.fill
+    e.path[1].style.filter='brightness(1.5)'
+    MostrarOculto(e.target.parentNode.id,1);
+
+}
+
+
+function outMapa(e) {
+    e.path[0].style.fill = colorOriginal
+    e.path[0].style.filter='none'
+  e.path[1].style.fill = colorOriginal
+    e.path[1].style.filter='none';
+	    MostrarOculto(e.target.parentNode.id,0);
+ 
+}
+		function comenzar() {
+			
+			document.getElementById("texto").setAttribute("hidden","");
+			document.getElementById("comenzar").setAttribute("hidden","");
+			
+			document.getElementById("mapa").removeAttribute("style");	
+			document.getElementById("siguiente").removeAttribute("hidden");	
+			document.getElementById("mapa").setAttribute("style","float:right");	
+			
+		}
+		function deporte() {
+			document.getElementById("musica_1").setAttribute("hidden","");
+			document.getElementById("politica_1").setAttribute("hidden","");
+			document.getElementById("deporte_1").removeAttribute("hidden");	
+			// body...
+		}
+		function politica() {
+			document.getElementById("musica_1").setAttribute("hidden","");
+			document.getElementById("deporte_1").setAttribute("hidden","");
+			document.getElementById("politica_1").removeAttribute("hidden");	
+			// body...
+		}
+		function musica() {
+			document.getElementById("deporte_1").setAttribute("hidden","");
+			document.getElementById("politica_1").setAttribute("hidden","");
+			document.getElementById("musica_1").removeAttribute("hidden");	
+			// body...
+		}
+		function cambiar2() {
+			document.getElementById("img").src="recursos/mapa2.png"
+		}
+		function cambiar1() {
+			document.getElementById("img").src="recursos/mapa4.png"
+		}
+		function cambiar3() {
+			document.getElementById("img").src="recursos/mapa3.png"
+		}
+		function cambiar4() {
+			document.getElementById("img").src="recursos/mapa5.png"
+		}
+				
+
+		function siguiente() {
+			
+			let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+			     elementosSvg.getElementById("ciudades_x5F_amarillo").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_rojo").style.display="none";
+elementosSvg.getElementById("ciudadades_x5F_naranja").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_verde").style.display="none";
+    paisesMapa = [
+      elementosSvg.getElementById("verde_00000021837095109837547290000003721790660256164274_"),
+         elementosSvg.getElementById("amarillo"),
+        elementosSvg.getElementById("rojo"),
+         elementosSvg.getElementById("naranja")
+    ]
+    paisesMapa.forEach(pais => {
+        pais.removeEventListener('mouseover', overMapa, false);
+  pais.removeEventListener('mouseout', outMapa, false);
+	pais.removeEventListener('click',MostrarAnimacion,false);
+        pais.style.cursor = 'pointer';})
+		 elementosSvg.getElementById("ciudades_x5F_amarillo").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudades_x5F_rojo").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudadades_x5F_naranja").addEventListener('click',MostrarAnimacion,false);
+elementosSvg.getElementById("ciudades_x5F_verde").addEventListener('click',MostrarAnimacion,false);
+		document.getElementById("mapa").setAttribute("style","float:left");	
+			document.getElementById("contexto").setAttribute("hidden","");
+			document.getElementById("siguiente").setAttribute("hidden","");
+			document.getElementById("atras").removeAttribute("hidden");
+			document.getElementById("deporte").removeAttribute("hidden");
+			document.getElementById("politica").removeAttribute("hidden");
+			document.getElementById("musica").removeAttribute("hidden");
+			document.getElementById("amarillo_1").removeAttribute("onclick");
+			document.getElementById("amarillo_1").removeAttribute("onmouseover");
+			document.getElementById("rojo_1").removeAttribute("onclick");
+			document.getElementById("rojo_1").removeAttribute("onmouseover");
+			document.getElementById("verde_1").removeAttribute("onclick");
+			document.getElementById("verde_1").removeAttribute("onmouseover");
+			document.getElementById("naranja_1").removeAttribute("onclick");
+			document.getElementById("naranja_1").removeAttribute("onmouseover");
+					document.getElementById("escoger").removeAttribute("hidden");	
+			// body...
+		}
+		function atras() {
+			document.getElementById("escoger").setAttribute("hidden","");
+			document.getElementById("mapa").setAttribute("style","float:right");	
+			
+						let elementosSvg = document.querySelector('#mapa').getSVGDocument();
+			     elementosSvg.getElementById("ciudades_x5F_amarillo").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_rojo").style.display="none";
+elementosSvg.getElementById("ciudadades_x5F_naranja").style.display="none";
+elementosSvg.getElementById("ciudades_x5F_verde").style.display="none";
+    paisesMapa = [
+      elementosSvg.getElementById("verde_00000021837095109837547290000003721790660256164274_"),
+         elementosSvg.getElementById("amarillo"),
+        elementosSvg.getElementById("rojo"),
+         elementosSvg.getElementById("naranja")
+    ]
+    paisesMapa.forEach(pais => {
+        pais.addEventListener('mouseover', overMapa, false);
+  pais.addEventListener('mouseout', outMapa, false);
+	pais.addEventListener('click',MostrarAnimacion,false);
+        pais.style.cursor = 'pointer';})
+			document.getElementById("deporte").setAttribute("hidden","");
+			document.getElementById("politica").setAttribute("hidden","");
+			document.getElementById("musica").setAttribute("hidden","");
+			document.getElementById("deporte_1").setAttribute("hidden","");
+			document.getElementById("politica_1").setAttribute("hidden","");
+			document.getElementById("musica_1").setAttribute("hidden","");
+			document.getElementById("rojo").setAttribute("hidden","");
+			document.getElementById("amarillo").setAttribute("hidden","");
+			document.getElementById("naranja").setAttribute("hidden","");
+			document.getElementById("verde").setAttribute("hidden","");
+			document.getElementById("contexto").removeAttribute("hidden");
+			document.getElementById("atras").setAttribute("hidden","");
+			document.getElementById("siguiente").removeAttribute("hidden");
+			document.getElementById("amarillo_1").setAttribute("onclick","departamento2()");
+			document.getElementById("amarillo_1").setAttribute("onmouseover","cambiar2()");
+			document.getElementById("rojo_1").setAttribute("onclick","departamento3()");
+			document.getElementById("rojo_1").setAttribute("onmouseover","cambiar3()");
+			document.getElementById("verde_1").setAttribute("onclick","departamento4()");
+			document.getElementById("verde_1").setAttribute("onmouseover","cambiar4()");
+			document.getElementById("naranja_1").setAttribute("onclick","departamento1()");
+			document.getElementById("naranja_1").setAttribute("onmouseover","cambiar1()");
+			// body...
+		}
+	</script>
+</body>
+</html>

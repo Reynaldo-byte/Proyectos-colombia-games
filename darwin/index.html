@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<script type="text/javascript"> audio=document.createElement('audio')
+audio.preload="auto"
+audio.src='recursos/32.mp3'
+</script>
+<body >
+	<script src="script.js"></script>
+	<div id="inicio" onmouseover="audio.play()">
+		<img src="recursos/firma.png">
+		<h2>Un Gran Emprendedor</h2>
+		<button id="avanzar" onclick="avanzar();audio.pause()" style="font-size: 2.5rem;">Siguiente</button>
+	</div>
+	<div id="contenido" hidden>
+		<div id="buttons"><br><br><br><br>
+			<button onclick="actualizar(1809)">1809</button><br>
+			<button onclick="actualizar(1831)">1831</button><br>
+			<button onclick="actualizar(1832)">1832</button><br>
+			<button onclick="actualizar(1835)">1835</button><br>
+			<button onclick="actualizar(1836)">1836</button><br>
+			<button onclick="actualizar(1858)">1858</button><br>
+			<button onclick="actualizar(1859)">1859</button><br>
+			<button onclick="actualizar(1882)">1882</button><br><br>
+			<button onclick="window.location.replace('ley.html')">Siguiente</button>
+		</div>
+		<div id="gif">
+			<video id="gifs" src=""></video>
+			<p id="texto"></p>
+		</div>
+	</div>
+<div style="position: absolute; top: 0px;left: 0px;background-color:transparent;width:fit-content;padding:0px">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+    		    <div id="aviso-movil-horizontal"><br><br>
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+    <img src="recursos/rotate.gif"/></div>
+</body>
+</html>

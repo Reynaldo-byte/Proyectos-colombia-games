@@ -1,0 +1,55 @@
+recursos/<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+		<div style="position: absolute; top: 0px;">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+<script type="text/javascript">
+		const audio = document.createElement("audio");
+audio.preload = "auto";
+audio.src = "recursos/18.mp3";
+
+const audio2 = document.createElement("audio");
+audio2.preload = "auto";
+audio2.src = "recursos/62.mp3";
+	function cargar() {
+		document.getElementById("video").removeAttribute("hidden");
+		document.getElementById("contenido").removeAttribute("onmouseover");
+		document.getElementById("video1").play();
+		document.getElementById("inicio").setAttribute("hidden","");
+		audio2.pause();
+
+		// body...
+	}
+	function comenzar0() {
+		document.getElementById("video1").currentTime=0;
+		document.getElementById("video1").play();
+		// body...
+	}
+
+</script> <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img width="100%" src="recursos/rotate.gif"/></div>
+	<div id="contenido" onmouseover="audio2.play();">
+
+		<div id="inicio">
+			<p id="titulo">Pasos para crear un Anuncio Publicitario</p>
+			<p id="exp">A continuación encontrás un sencillo tutorial donde podrás identificar los principales aspectos a tener en cuenta en la realización de un anuncio publicitario</p>
+			<button onclick="cargar();audio2.pause();" onmouseover="audio.play()">Comenzar</button>
+		</div>
+		<div id="video" hidden>
+			<video id="video1" src="recursos/video.mp4" ></video>
+			<br>
+			<button onclick="comenzar0()" onmouseover="audio.play()">Repetir</button>
+		</div>
+
+	</div>
+<script type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+#img_1,#img_2,#img_3,#img_4{
+	width: 15%;
+	
+}
+#img_4{
+	left: 15%;
+	top: 15%;
+}
+#img_3{
+	left: 40%;
+	top: 15%;
+}
+#img_2{
+	left: 25%;
+	top: 40%;
+}

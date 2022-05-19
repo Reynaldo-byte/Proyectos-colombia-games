@@ -1,0 +1,156 @@
+body{
+	background-image: url("fondo.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	text-align: center;
+	font-family: calibri;
+}
+#contenido{
+	margin: auto;
+	text-align: center;
+}
+#inicio{
+	background-color: rgba(255, 255, 255, 0.4);
+	border-radius: 25%;
+}
+#info{
+	margin: auto;
+    font-size: 1.5rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    padding: 0.2rem;
+    border-radius: 1.5rem;
+   
+}
+
+             @media only screen and (orientation:portrait) {
+        #contenido,#billetes_img { display:none; }
+        #aviso-movil-horizontal { 
+        	margin: 0 auto;
+        	width: 40%;
+          display:block;
+
+      font-size: 2rem;
+                text-align: center;
+                font-weight: bolder;}
+		     #juego{display:none;}    
+      
+    }
+
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+	    }
+p{
+	font-size: 1.5rem;
+	padding-right: 0.6rem;
+}
+h1{
+
+	font-size: 3rem;
+}
+h2{
+	font-size: 2rem;
+}
+#billetes_img
+{
+width: 70%;
+margin: auto;
+}
+#monedas{
+	width: 100%;
+}
+button{
+	background-color: brown;
+	font-size: 1.3rem;
+	color: white;
+	border-color: skyblue;
+	border-width: 0.2rem;
+}
+button:hover{
+	background-color: skyblue;
+	font-size: 1.7rem;
+	color: white;
+	border-color: brown;
+	border-width: 0.4rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+.toque{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5vh;
+	background-color: rgba(255, 0, 0, 0.5);
+	position: absolute;
+	z-index: 1;
+}
+.toque:hover{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5.5vh;
+	background-color: rgba(255, 0, 0, 1);
+	position: absolute;
+	color: white;
+}
+.levante{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5vh;
+	background-color: orange;
+	position: absolute;
+}
+.levante:hover{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5.5vh;
+
+	position: absolute;
+	color: white;
+}
+.gire{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: purple;
+	font-size: 5vh;
+	background-color: rgba(0, 230, 0, 0.5);
+	position: absolute;
+	z-index: 1;
+}
+.gire:hover{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5.5vh;
+	background-color: rgba(0, 230, 0, 1);
+	position: absolute;
+	color: white;
+}
+.compruebe{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: purple;
+	font-size: 5vh;
+	background-color: rgba(255, 0, 230, 0.5);
+	position: absolute;
+	z-index: 1;
+}
+.compruebe:hover{
+	border-radius: 100%;
+	border-width: 1.5px;
+	border-color: red;
+	font-size: 5.5vh;
+	background-color: rgba(255, 0, 230, 1);
+	position: absolute;
+	color: white;
+}
+
+#monedas{
+	width: 100%;
+}

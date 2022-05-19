@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="button.css">
+</head>
+<body>
+	<style type="text/css">
+		div{
+			margin: auto;
+			
+		}
+		h1{
+			font-size: 3rem;
+			font-style: oblique;
+		}
+		p,b{
+			font-size: 1.5rem;
+		}
+		button{
+			font-size: 1.3rem;
+			background-color: aquamarine;
+		}
+		button:hover{
+			font-size: 1.8rem;
+			color: white;
+			background-color: skyblue;
+		}
+
+		body{
+			text-align: center;
+			background-color: #ccecd7;
+background-image: url("recursos/fondo.png");
+background-size: 100%;}
+	  @media only screen and (orientation:portrait) {
+        #contenido { display:none; }
+				     #arrastrables { display:none; }
+        #aviso-movil-horizontal { 
+        	margin: 0 auto;
+        	width: 40%;
+          display:block;
+
+      font-size: 2rem;
+                text-align: center;
+                font-weight: bolder;}
+		     #juego{display:none;}    
+      
+    }
+
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+	    }
+	</style>
+	<div style="position: absolute; top: 0px;background-color:transparent">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+
+  
+    	    	  <div id="aviso-movil-horizontal" style="z-index:1">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img src="recursos/rotate.gif" style="
+    margin-left: -70%;
+"/></div>
+	<div id="contenido" style=";background-color: rgba(255, 255, 255, 0.6);align-items:center ; width: 40%;">
+		<div><h1>Soy Muy Importante</h1></div>
+		<br><br>
+		<div>		<p>Conoce las partes del cuerpo, los rasgos y expresiones de la cara, acompañado de nuestro personaje</p>
+		<br>
+		<b>¡Será muy divertido!</b><br>
+		<br></div>
+<div><button onclick="window.location.replace('cuerpo.html')">Jugar</button></div>
+		
+	</div>
+
+</body>
+</html>

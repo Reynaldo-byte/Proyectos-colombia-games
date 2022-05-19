@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+</head>
+<!-- using Bootstrap CSS because lazy to write 3 classes --> 
+
+<body>
+	<div style="position: absolute; top: 0px;background-color:transparent">
+      <img src="img-foot.png" alt="logo: escuela nueva">
+    </div> <script src="DragDropTouch.js"></script>
+    <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img width="100%" src="rotate.gif"></div>
+	<style type="text/css">
+		@media only screen and (orientation:portrait) {
+        #contenido,#inicio { display:none; }
+        #aviso-movil-horizontal { 
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;}
+	#contenido{display:none;}	    
+      
+    }
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
+
+	
+
+
+		canvas {
+			cursor: crosshair;
+		}
+		
+			a{
+				background-color: rgba(0, 0, 0, 0.5);
+				color: white;
+				padding: 0.2rem;
+			}
+		div#sidebar {
+			
+			background-color: rgba(255, 255, 255, 0.5);
+			padding: 1rem;
+			position: absolute;
+
+		
+	
+		
+		}
+
+		canvas#canvas {
+	
+position: absolute;
+
+
+
+		}
+
+		.btn {
+			
+			width: 100%;
+		}
+		input {
+			width: 100%;
+		
+		}
+
+
+
+body{
+			text-align: center;
+			background-image: url('recursos/pintor/pintor.png');
+			background-size: 100%;
+		}
+
+ #mensaje{
+          	font-size: 2.5rem;
+          	color:white
+          }
+         
+         button,a {background-image: linear-gradient(to right, #4CB8C4 0%, #3CD3AD  51%, #4CB8C4  100%)}
+         button,a {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            
+          }
+          	div{
+          		margin: auto;
+          	}
+          button:hover,a:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+
+
+				.colorpicker {
+			background: transparent;
+			
+		}
+		         body{
+         	text-align: center;
+         }
+	h1{ margin: auto;
+	}</style>
+		<script type="text/javascript">         function cargar(){
+        document.getElementById('inicio').setAttribute("hidden","")
+        document.getElementById('contenido').removeAttribute("hidden")
+        document.getElementById('canvas').style.display=""
+        
+      
+
+    }</script>
+    <h1 style="font-size:2.5rem">Pintor</h1>
+    <div id="inicio"style="width:50%;border-radius:1rem;background-color: rgba(255, 255, 255, 0.4);margin-top: 20%;">
+    <h1>¿Te gustaría ser pintor?</h1>
+    <p><h2>Los pintores realizamos grandes obras de arte utilizando diferentes técnicas.</h2></p>
+    <p><h2>Para ser un buen pintor hay que estudiar en una escuela de arte, tener mucho talento y creatividad.</h2></p>
+    <button onclick="cargar()" class="btn-grad">Jugar</button>
+</div>
+
+		<div id="contenido" hidden>
+	<div id="sidebar" >
+		<div class="colorButtons">
+			<h3>Color</h3>
+			<input type="color" id="colorpicker" value="#c81464" class="colorpicker">
+		</div>
+		<div class="colorButtons">
+			<h3>Color de fondo</h3>
+			<input type="color" value="#ffffff" id="bgcolorpicker" class="colorpicker">
+		</div>
+
+		<div class="toolsButtons">
+			<h3>Herramientas</h3>
+			<button id="eraser" class="btn btn-default" hidden> <span class="glyphicon glyphicon-erase" aria-hidden="true"></span>Borrador</button>
+			<button id="clear" class="btn btn-danger"> <span class="glyphicon glyphicon-repeat" aria-hidden="true"></span>Limpiar</button>
+			<br>
+		</div>
+
+		<div class="buttonSize">
+			<h3>Tamaño (<span id="showSize">5</span>)</h3>
+			<input type="range" min="1" max="50" value="5" step="1" id="controlSize">
+		</div>
+
+		<div class="canvasSize" hidden>
+			<h3>Canvas</h3>
+			<div class="input-group">
+				<span class="input-group-addon">X</span>
+				<input type="number" id="sizeX" class="form-control" placeholder="sizeX" value="800" class="size">
+			</div>
+			<div class="input-group">
+				<span class="input-group-addon">Y</span>
+				<input type="number" id="sizeY" class="form-control" placeholder="sizeY" value="800" class="size">
+			</div>
+			<input type="button" class="updateSize btn btn-success" value="Update" id="canvasUpdate">
+		</div>
+		<div class="Storage" hidden>
+		
+			<input type="button" value="Save" class="btn btn-warning" id="save">
+			<input type="button" value="Load" class="btn btn-warning" id="load" hidden>
+			<input type="button" value="Clear" class="btn btn-warning" id="clearCache" hidden> 
+		</div>
+		<div class="extra" >
+		<br><br>
+			<a id="saveToImage" class="btn btn-warning" > Descargar</a><br><br><div><button onclick="window.location.replace('index.html')">Volver</button></div>
+		</div>
+		
+	</div>
+	</div>
+	<script type="text/javascript">
+			// SETTING ALL VARIABLES
+
+		var isMouseDown=false;
+		var canvas = document.createElement('canvas');
+		var body = document.getElementsByTagName("body")[0];
+		var ctx = canvas.getContext('2d');
+		var linesArray = [];
+		currentSize = 5;
+		var currentColor = "rgb(200,20,100)";
+		var currentBg = "white";
+
+		// INITIAL LAUNCH
+
+		createCanvas();
+
+		// BUTTON EVENT HANDLERS
+
+		document.getElementById('canvasUpdate').addEventListener('click', function() {
+			createCanvas();
+			redraw();
+		});
+		document.getElementById('colorpicker').addEventListener('change', function() {
+			currentColor = this.value;
+		});
+		document.getElementById('bgcolorpicker').addEventListener('change', function() {
+			ctx.fillStyle = this.value;
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			redraw();
+			currentBg = ctx.fillStyle;
+		});
+		document.getElementById('controlSize').addEventListener('change', function() {
+			currentSize = this.value;
+			document.getElementById("showSize").innerHTML = this.value;
+		});
+		document.getElementById('saveToImage').addEventListener('click', function() {
+			downloadCanvas(this, 'canvas', 'masterpiece.png');
+		}, false);
+		document.getElementById('eraser').addEventListener('click', eraser);
+		document.getElementById('clear').addEventListener('click', createCanvas1);
+		document.getElementById('save').addEventListener('click', function() {
+			downloadCanvas(this, 'canvas', 'masterpiece.png');
+		}, false);
+		document.getElementById('load').addEventListener('click', load);
+		document.getElementById('clearCache').addEventListener('click', function() {
+			localStorage.removeItem("savedCanvas");
+			linesArray = [];
+			console.log("Cache cleared!");
+		});
+
+		// REDRAW 
+
+		function redraw() {
+				for (var i = 1; i < linesArray.length; i++) {
+					ctx.beginPath();
+					ctx.moveTo(linesArray[i-1].x, linesArray[i-1].y);
+					ctx.lineWidth  = linesArray[i].size;
+					ctx.lineCap = "round";
+					ctx.strokeStyle = linesArray[i].color;
+					ctx.lineTo(linesArray[i].x, linesArray[i].y);
+					ctx.stroke();
+				}
+		}
+
+		// DRAWING EVENT HANDLERS
+
+
+
+		// CREATE CANVAS
+
+		function createCanvas() {
+			canvas.id = "canvas";
+			canvas.width = 400;
+			canvas.height = 400;
+
+			canvas.style.border = "1px solid";
+			canvas.style.display="none"
+			ctx.fillStyle = currentBg;
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			body.appendChild(canvas);
+
+		}
+		function createCanvas1() {
+
+			canvas.id = "canvas";
+			canvas.width = 400;
+			canvas.height = 400;
+
+			canvas.style.border = "1px solid";
+
+			ctx.fillStyle = currentBg;
+			ctx.fillRect(0, 0, canvas.width, canvas.height);
+			body.appendChild(canvas);
+			linesArray=[]
+
+		}
+		// DOWNLOAD CANVAS
+
+		function downloadCanvas(link, canvas, filename) {
+			link.href = document.getElementById(canvas).toDataURL();
+			link.download = filename;
+		}
+
+		// SAVE FUNCTION
+
+		function save() {
+			localStorage.removeItem("savedCanvas");
+			localStorage.setItem("savedCanvas", JSON.stringify(linesArray));
+			console.log("Saved canvas!");
+		}
+
+		// LOAD FUNCTION
+
+		function load() {
+			if (localStorage.getItem("savedCanvas") != null) {
+				linesArray = JSON.parse(localStorage.savedCanvas);
+				var lines = JSON.parse(localStorage.getItem("savedCanvas"));
+				for (var i = 1; i < lines.length; i++) {
+					ctx.beginPath();
+					ctx.moveTo(linesArray[i-1].x, linesArray[i-1].y);
+					ctx.lineWidth  = linesArray[i].size;
+					ctx.lineCap = "round";
+					ctx.strokeStyle = linesArray[i].color;
+					ctx.lineTo(linesArray[i].x, linesArray[i].y);
+					ctx.stroke();
+				}
+				console.log("Canvas loaded.");
+			}
+			else {
+				console.log("No canvas in memory!");
+			}
+		}
+
+		// ERASER HANDLING
+
+		function eraser() {
+			currentSize = 50;
+			currentColor = ctx.fillStyle
+		}
+
+		// GET MOUSE POSITION
+
+		function getMousePos(canvas, evt) {
+			var rect = canvas.getBoundingClientRect();
+			return {
+				x: evt.clientX - rect.left,
+				y: evt.clientY - rect.top
+			};
+		}
+
+		// ON MOUSE DOWN
+
+		function mousedown(canvas, evt) {
+			var mousePos = getMousePos(canvas, evt);
+			isMouseDown=true
+			var currentPosition = getMousePos(canvas, evt);
+			ctx.moveTo(currentPosition.x, currentPosition.y)
+			ctx.beginPath();
+			ctx.lineWidth  = currentSize;
+			ctx.lineCap = "round";
+			ctx.strokeStyle = currentColor;
+
+		}
+
+		// ON MOUSE MOVE
+
+		function mousemove(canvas, evt) {
+
+			if(isMouseDown){
+				var currentPosition = getMousePos(canvas, evt);
+				ctx.lineTo(currentPosition.x, currentPosition.y)
+				ctx.stroke();
+				store(currentPosition.x, currentPosition.y, currentSize, currentColor);
+			}
+		}
+
+		// STORE DATA
+
+		function store(x, y, s, c) {
+			var line = {
+				"x": x,
+				"y": y,
+				"size": s,
+				"color": c
+			}
+			linesArray.push(line);
+		}
+
+		// ON MOUSE UP
+
+		function mouseup() {
+			isMouseDown=false
+			store()
+		}
+		//touch
+		var ongoingTouches = [];
+		function handleStart(evt) {
+  evt.preventDefault();
+  
+
+  var touches = evt.changedTouches;
+
+  for (var i=0; i<touches.length; i++) {
+    ongoingTouches.push(touches[i]);
+    var color = colorForTouch();
+    ctx.fillStyle = color;
+    ctx.fillRect(touches[i].pageX-2, touches[i].pageY-2, 4, 4);
+  }
+}
+function handleMove(evt) {
+  evt.preventDefault();
+  
+var touches = evt.changedTouches;
+  ctx.lineWidth = currentSize;
+
+  for (var i=0; i<touches.length; i++) {
+    var color = colorForTouch();
+    var idx = ongoingTouchIndexById(touches[i].identifier);
+
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(ongoingTouches[idx].pageX, ongoingTouches[idx].pageY);
+    ctx.lineTo(touches[i].pageX, touches[i].pageY);
+    ctx.closePath();
+    ctx.stroke();
+    ongoingTouches.splice(idx, 1, touches[i]);  // swap in the new touch record
+  }
+}
+function colorForTouch() {
+  currentColor=document.getElementById('colorpicker').value;
+  return currentColor;
+}
+function handleEnd(evt) {
+  evt.preventDefault();
+
+  var touches = evt.changedTouches;
+
+  ctx.lineWidth = currentSize;
+
+  for (var i=0; i<touches.length; i++) {
+    var color = colorForTouch();
+    var idx = ongoingTouchIndexById(touches[i].identifier);
+
+    ctx.fillStyle = color;
+    ctx.beginPath();
+    ctx.moveTo(ongoingTouches[i].pageX, ongoingTouches[i].pageY);
+    ctx.lineTo(touches[i].pageX, touches[i].pageY);
+    ongoingTouches.splice(i, 1);  // remove it; we're done
+  }
+}
+function handleCancel(evt) {
+  
+  var touches = evt.changedTouches;
+
+  for (var i=0; i<touches.length; i++) {
+    ongoingTouches.splice(i, 1);  // remove it; we're done
+  }
+}
+function ongoingTouchIndexById(idToFind) {
+  for (var i=0; i<ongoingTouches.length; i++) {
+    var id = ongoingTouches[i].identifier;
+
+    if (id == idToFind) {
+      return i;
+    }
+  }
+  return -1;    // not found
+}
+    //======================================================================
+    // VARIABLES
+    //======================================================================
+    var canvas = document.querySelector('canvas');
+		var body = document.getElementsByTagName("body")[0];
+		var ctx = canvas.getContext('2d');
+		linesArray = [];
+		
+		var currentColor = "rgb(200,20,100)";
+		var currentBg = "white";
+    let correccionX = 0;
+    let correccionY = 0;
+    let pintarLinea = false;
+    // Marca el nuevo punto
+    let nuevaPosicionX = 0;
+    let nuevaPosicionY = 0;
+
+    let posicion = canvas.getBoundingClientRect()
+    correccionX =278;
+    correccionY = posicion.y;
+
+   
+
+    //======================================================================
+    // FUNCIONES
+    //======================================================================
+
+    /**
+     * Funcion que empieza a dibujar la linea
+     */
+    function empezarDibujo () {
+        pintarLinea = true;
+        linesArray.push([]);
+    };
+    
+    /**
+     * Funcion que guarda la posicion de la nueva línea
+     */
+    function guardarLinea() {
+        linesArray[linesArray.length - 1].push({
+            x: nuevaPosicionX,
+            y: nuevaPosicionY
+        });
+    }
+
+    /**
+     * Funcion dibuja la linea
+     */
+    function dibujarLinea (event) {
+          event.preventDefault();
+        if (pintarLinea) {
+            let ctx = canvas.getContext('2d')
+            // Estilos de linea
+            ctx.lineJoin = ctx.lineCap = 'round';
+            ctx.lineWidth = currentSize;
+            // Color de la linea
+            ctx.strokeStyle = currentColor;
+            // Marca el nuevo punto
+            if (event.changedTouches == undefined) {
+                // Versión ratón
+                nuevaPosicionX = event.layerX;
+                nuevaPosicionY = event.layerY;
+            } else {
+                // Versión touch, pantalla tactil
+                nuevaPosicionX = event.changedTouches[0].pageX - correccionX;
+                nuevaPosicionY = event.changedTouches[0].pageY - correccionY;
+                           }
+            // Guarda la linea
+            guardarLinea();
+            // Redibuja todas las linesArray guardadas
+            ctx.beginPath();
+            linesArray.forEach(function (segmento) {
+                ctx.moveTo(segmento[0].x, segmento[0].y);
+                segmento.forEach(function (punto, index) {
+                    ctx.lineTo(punto.x, punto.y);
+                    console.log(punto.x)
+                });
+            });
+            ctx.stroke();
+        }}
+
+    /**
+     * Funcion que deja de dibujar la linea
+     */
+    function pararDibujar () {
+        pintarLinea = false;
+        guardarLinea();
+    }
+    canvas.addEventListener('mousedown', empezarDibujo, false);
+   canvas.addEventListener('mousemove', dibujarLinea, false);
+    canvas.addEventListener('mouseup', pararDibujar, false);
+
+    // Eventos pantallas táctiles
+    canvas.addEventListener('touchstart', empezarDibujo, false);
+    canvas.addEventListener('touchmove', dibujarLinea, false);
+
+	</script>
+  </body>
+</html>

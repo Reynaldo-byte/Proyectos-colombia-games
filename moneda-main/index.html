@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<script src="script.js"></script>
+</head>
+<body>
+			<div style="position: absolute; top: 0px;">
+      <img src="img-foot.png" alt="logo: escuela nueva">
+    </div>
+
+  
+    	    	  <div id="aviso-movil-horizontal" style="z-index:1">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img src="rotate.gif" style="
+    margin-left: -70%;
+"/></div>
+<div id="contenido">
+
+	<h1>Billetes y monedas</h1>
+	<div id="inicio">
+		<h2>Actividad</h2>
+		<p>A continuación observaremos las características principales de los billetes y monedas que se utilizan en nuestro país.</p>
+		<button onclick="inicio()">Comenzar</button>
+	</div>
+	<div id="info" hidden>
+		<p>El PESO colombiano es la unidad monetaria de Colombia.<br>Los valores en pesos se escriben acmpañados del siguiente símbolo <b>$</b>.<br> Informalmente abreviada: <b>COL$</b><br>La circulación del dinero en Colombia es controlada por <l> Banco de la República de Colombia</l></p><br><br>
+		<button onclick="billetes()">Billetes</button><button onclick="monedas()">Monedas</button>
+	</div>
+	
+
+</div>
+	<div id="monedas"  style="display: none;">
+<iframe src="moneda.html" width="100%" style="
+    height: 60vh;
+"> </iframe>
+<button onclick="volverM()">Volver</button>
+	</div>
+<div id="billetes_img" hidden><div id="5000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="5000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+		
+	</div>
+<div id="2000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="2000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+		
+	</div>
+	<div id="10000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="10000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+		
+	</div>
+
+	<div id="100000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="100000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+		
+	</div>
+
+	<div id="20000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="20000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+	</div>	
+	<div id="50000" style="width:100%;height: 72vh; " hidden>
+
+		<iframe src="50000.html" width="100%" height="100%" allowfullscreen>
+
+</iframe>
+
+		
+	</div>
+	
+
+
+</div>
+<div id="billetes" style="display: none;">
+	<br><br>
+		<button onclick="dos()"> $2.000</button>
+		<button onclick="cinco()"> $5.000</button>
+		<button onclick="diez()"> $10.000</button>
+		<button onclick="veinte()"> $20.000</button>
+		<button onclick="cincuenta()"> $50.000</button>
+		<button onclick="cien()"> $100.000</button>
+		<button onclick="volverB()">Volver</button>
+	</div>
+</body>
+</html>

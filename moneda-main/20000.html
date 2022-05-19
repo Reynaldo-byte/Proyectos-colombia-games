@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+	<script src="billetes.js"></script>
+	<div id="anverso" >
+		<img id="20000_img" src="20000/anverso.png" style="position: relative;z-index: 0;width: 100%;">
+
+
+
+		<button id="toque_1" class="toque" onclick="toque()" style="margin-top: 2%;
+    	left: 3%;position: absolute;z-index: 1;" onclick="toque()">+</button>
+
+
+	
+	</div>
+
+	<div id="anverso_uv" hidden>
+		<img id="50000_img" src="20000/anverso_uv.png" style="position: relative;z-index: 0;width: 100%;">
+
+
+
+	
+
+
+	
+	</div>
+		
+	</div>
+	<div style="position:absolute;z-index: 10;width: 100%;top: 0%;background-color:white ;text-align: center;" id="toque" hidden>
+		<p>Este billete rinde homenaje al presidente de Colombia Alfonso López Michelsen, en cumplimiento del artículo 8° de la Ley 1599 de 2012, y al sombrero vueltiao en cumplimiento del artículo 2° de la Ley 908 de 2004, ambas leyes del Congreso de la República. Así mismo, exalta los canales de La Mojana y el fruto del anón.</p>
+			<button onclick="cerrar('toque')">Cerrar</button>
+		</div>
+	</div>
+
+
+
+	</div>
+	</div>
+	<div id="reverso" hidden>
+		<img id="20000_img" src="20000/reverso.png" style="position: relative;z-index: 0;width: 100%;" >
+
+	</div>
+
+
+		
+	</div>
+		<div id="reverso_uv" hidden>
+		<img id="20000_img" src="20000/reverso_uv.png" style="position: relative;z-index: 0;width: 100%;" >
+
+	</div>
+
+
+		<button style="position:absolute;z-index: 9;top: 0%;right: 0%;background-color: transparent;border-color: transparent;" onclick="voltear('reverso')" id="voltear"><img src="5000/volt.png"></button><button style="position:absolute;z-index: 9;top: 0%;right: 10%;" onclick="uv(1)" id="uv">Ultravioleta</button>
+
+</body>
+</html>

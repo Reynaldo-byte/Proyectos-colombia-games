@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<script type="text/javascript">
+	function moneda_50(){
+		document.getElementById("50").removeAttribute("hidden");
+		document.getElementById("100").setAttribute("hidden","");
+		document.getElementById("200").setAttribute("hidden","");
+		document.getElementById("500").setAttribute("hidden","");
+		document.getElementById("1000").setAttribute("hidden","");
+	}
+	function moneda_100(){
+		document.getElementById("50").setAttribute("hidden","");
+		document.getElementById("100").removeAttribute("hidden");
+		document.getElementById("200").setAttribute("hidden","");
+		document.getElementById("500").setAttribute("hidden","");
+		document.getElementById("1000").setAttribute("hidden","");
+	}
+	function moneda_200(){
+		document.getElementById("50").setAttribute("hidden","");
+		document.getElementById("100").setAttribute("hidden","");
+		document.getElementById("200").removeAttribute("hidden");
+		document.getElementById("500").setAttribute("hidden","");
+		document.getElementById("1000").setAttribute("hidden","");
+	}
+	function moneda_500(){
+		document.getElementById("50").setAttribute("hidden","");
+		document.getElementById("100").setAttribute("hidden","");
+		document.getElementById("200").setAttribute("hidden","");
+		document.getElementById("500").removeAttribute("hidden");
+		document.getElementById("1000").setAttribute("hidden","");
+	}
+	function moneda_1000(){
+		document.getElementById("50").setAttribute("hidden","");
+		document.getElementById("100").setAttribute("hidden","");
+		document.getElementById("200").setAttribute("hidden","");
+		document.getElementById("500").setAttribute("hidden","");
+		document.getElementById("1000").removeAttribute("hidden");
+	}
+</script>
+
+<body>
+	<button onclick="moneda_50()">$50</button><button onclick="moneda_100()">$100</button><button onclick="moneda_200()">$200</button><button onclick="moneda_500()">$500</button><button onclick="moneda_1000()">$1000</button>
+	<div id="50"><div style="float:right;width:45%;text-align: center;"><img src="50/reverso.png"><br>El reverso (sello) de cada moneda, presenta en números arábigos el valor, debajo del cual aparece la unidad monetaria PESOS, el texto REPÚBLICA DE COLOMBIA y el año de emisión. Adicionalmente, el contorno presenta ondas en alto relieve que aluden al movimiento del agua, reiterando el interés del Emisor por la promoción y protección de nuestros recursos naturales.</div><div style="float:left;width: 45%;text-align: center;"><img src="50/anverso.png"><br>El oso de anteojos (Tremarctos ornatus), también conocido como oso andino o sudamericano, habita exclusivamente en los bosques húmedos andinos que cuentan con precipitaciones anuales superiores a los 1.000 mm (zonas perhúmedas), aunque también se le encuentra en páramos y zonas semiáridas cuyas precipitaciones rondan los 250 mm anuales. En Colombia se encuentra a lo largo de las tres cordilleras de la Región Andina, en las Serranías de la Macarena, de Baudó y del Darién. Actualmente está en peligro de extinción.</div></div>
+	<div id="100" hidden><div style="float:right;width:45%;text-align: center;"><img src="100/reverso.png"><br>El reverso (sello) de cada moneda, presenta en números arábigos el valor, debajo del cual aparece la unidad monetaria PESOS, el texto REPÚBLICA DE COLOMBIA y el año de emisión. Adicionalmente, el contorno presenta ondas en alto relieve que aluden al movimiento del agua, reiterando el interés del Emisor por la promoción y protección de nuestros recursos naturales.</div><div style="float:left;width: 45%;text-align: center;"><img src="100/anverso.png"><br>El frailejón (Espeletia grandiflora), es la planta característica de los páramos sudamericanos, presente solo en la cordillera de los Andes de Venezuela, Colombia y Ecuador. De las ocho especies que se conocen, cinco se encuentran en la Cordillera Oriental de Colombia.</div></div>
+	<div id="200" hidden><div style="float:right;width:45%;text-align: center;"><img src="200/reverso.png"><br>El reverso (sello) de cada moneda, presenta en números arábigos el valor, debajo del cual aparece la unidad monetaria PESOS, el texto REPÚBLICA DE COLOMBIA y el año de emisión. Adicionalmente, el contorno presenta ondas en alto relieve que aluden al movimiento del agua, reiterando el interés del Emisor por la promoción y protección de nuestros recursos naturales.</div><div style="float:left;width: 45%;text-align: center;"><img src="200/anverso.png"><br>La guacamaya bandera (Ara macao), nueva imagen de la moneda de 200, pertenece a la familia de los loros pscitácidos, sin duda los más coloridos de toda la Amazonía. En los últimos años, la destrucción de su hábitat y su captura para el comercio ilegal la ha puesto peligro de extinción, incluso ya ha desaparecido de muchas de las áreas de donde es originaria.
+</div></div>
+	<div id="500" hidden><div style="float:right;width:45%;text-align: center;"><img src="500/anverso.png"><br>Una rana de cristal, habitante del piedemonte y las estribaciones de los Andes (una de las zonas de mayor riqueza biológica de Colombia), será la imagen ubicada en el anverso (cara) de la moneda de 500,incluye, además, el nombre común y científico de esta especie y unas líneas onduladas finas, que simulan agua en movimiento y que atraviesan en el costado inferior derecho parte de la corona y parte del núcleo de la especie monetaria.</div><div style="float:left;width: 45%;text-align: center;"><img src="500/reverso.png"><br>En el reverso (sello) se observan la palabra REPÚBLICA DE COLOMBIA, la denominación de la moneda, el número 500, debajo de la cual está la palabra PESOS y el año de emisión, que se encuentra en la parte inferior del núcleo. La corona presenta líneas onduladas que aluden al agua en movimiento.</div></div>
+	<div id="1000" hidden><div style="float:right;width:45%;text-align: center;"><img src="1000/anverso.png"><br>Una tortuga caguama, especie marina altamente migratoria, es la imagen en el anverso (cara) de la nueva moneda bimetálica de 1.000.El diseño de la moneda presenta unas líneas onduladas continuas en diversos niveles que representan ondas de agua, ubicadas desde el centro hacia la circunferencia exterior de la moneda con un fondo de líneas rectas finas en sentido radial y una leyenda sobre una franja circular con la palabra AGUA repetida siete veces en forma consecutiva e invertida cada una respecto de la anterior. Así mismo, muestra a la tortuga entrando a las ondas del agua, e incluye el nombre común y científico de esta especie.</div><div style="float:left;width: 45%;text-align: center;"><img src="1000/reverso.png"><br>En el reverso (sello), ocupando la mitad inferior de la moneda, se pueden apreciar líneas onduladas continuas en sentido horizontal sobre un fondo de líneas rectas con la leyenda CUIDAR EL AGUA repetida cuatro veces en forma consecutiva e invertida cada una respecto de la anterior. Ocupando la mitad superior de la moneda se observa la denominación de la especie monetaria, el número 1000, y debajo de éste la palabra PESOS. También incluye el texto REPÚBLICA DE COLOMBIA, el año de emisión y una imagen latente que genera un efecto visual dependiendo del ángulo en que se aprecie. En una posición de la moneda se puede leer la palabra MIL, que cambia a BRC (iniciales del Banco de la República de Colombia) al cambiar el ángulo desde el cual se observa la moneda.</div></div>
+	
+<style type="text/css">
+	div{
+		font-size: 1.3rem;
+		background-color: rgba(255, 255, 255, 0.6);
+	}
+	body{
+		background-color: #b0b0b0;
+background-image: url("data:image/svg+xml,%3Csvg width='84' height='48' viewBox='0 0 84 48' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h12v6H0V0zm28 8h12v6H28V8zm14-8h12v6H42V0zm14 0h12v6H56V0zm0 8h12v6H56V8zM42 8h12v6H42V8zm0 16h12v6H42v-6zm14-8h12v6H56v-6zm14 0h12v6H70v-6zm0-16h12v6H70V0zM28 32h12v6H28v-6zM14 16h12v6H14v-6zM0 24h12v6H0v-6zm0 8h12v6H0v-6zm14 0h12v6H14v-6zm14 8h12v6H28v-6zm-14 0h12v6H14v-6zm28 0h12v6H42v-6zm14-8h12v6H56v-6zm0-8h12v6H56v-6zm14 8h12v6H70v-6zm0 8h12v6H70v-6zM14 24h12v6H14v-6zm14-8h12v6H28v-6zM14 8h12v6H14V8zM0 8h12v6H0V8z' fill='%23d0d3bb' fill-opacity='0.4' fill-rule='evenodd'/%3E%3C/svg%3E");
+	}
+</style>
+</body>
+</html>

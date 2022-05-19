@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+	<style type="text/css">
+		@media only screen and (orientation:portrait) {
+        #comienzo { display:none; }
+        #aviso-movil-horizontal { 
+          display:block;
+      font-size: 1rem;
+                text-align: center;
+                font-weight: bolder;}
+	#profesiones{display:none;}	    
+      
+    }
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
+body{
+	font-family: sans-serif;
+	text-align: center;
+		background-color: #d3e2b4;
+background-image: url("recursos/fondo.png");
+background-size: 100%;
+}
+button img{
+	width: 45%;
+}
+#comienzo,#profesiones,#aviso-movil-horizontal{
+	background-color: rgba(255, 255, 255, 0.5);
+	margin: auto;
+	padding: 1rem;
+	border-radius: 1.5rem;
+}
+h1{
+	font-size: 3rem;
+	text-align: center;
+	font-style: oblique;
+}
+
+
+         #inicio {background-image: linear-gradient(to right, #EFEFBB 0%, #D4D3DD  51%, #EFEFBB  100%)}
+          #inicio {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+           
+          }
+
+          #inicio:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+		         button {background-image: linear-gradient(to right, #DC2424 0%, #4A569D  51%, #DC2424  100%)}
+         button {
+         	font-size: 1.5rem;
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+           
+          }
+
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+         
+         
+div{
+	padding: 1rem;
+}
+
+</style>
+
+
+</head>
+<script type="text/javascript">
+	function cargar(argumento) {
+		if(argumento=='botones'){
+				document.getElementById('inicio').setAttribute('onclick','window.location.replace("botones.html")')
+				document.getElementById('img').setAttribute('src','botones.png')
+		}
+				if(argumento=='bombero'){
+				document.getElementById('inicio').setAttribute('onclick','window.location.replace("bombero.html")')
+				document.getElementById('img').setAttribute('src','bombero.png')
+		}
+				if(argumento=='mayordomo'){
+				document.getElementById('inicio').setAttribute('onclick','window.location.replace("nayordomo.html")')
+				document.getElementById('img').setAttribute('src','mayordomo.png')
+		}
+				if(argumento=='pintor'){
+				document.getElementById('inicio').setAttribute('onclick','window.location.replace("paint.html")')
+				document.getElementById('img').setAttribute('src','pintor.png')
+		}
+				if(argumento=='medico'){
+				document.getElementById('inicio').setAttribute('onclick','window.location.replace("medico.html")')
+				document.getElementById('img').setAttribute('src','medico.png')
+		}
+	}
+	function comenzar() {
+		document.getElementById('comienzo').setAttribute("hidden","")
+		document.getElementById('profesiones').removeAttribute("hidden")
+
+	}
+</script>
+<body>
+	 <script src="DragDropTouch.js"></script>
+    <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img width="100%" src="rotate.gif"></div>
+<div style="position: absolute; top: 0px;background-color:transparent">
+      <img src="img-foot.png" alt="logo: escuela nueva">
+    </div>
+
+	<div id="container" style="height: 90vh;align-items: center;display: flex;">
+		<div id="comienzo">
+			<h1>Cuando sea GRANDE quiero ser</h1>
+			<button onclick="comenzar()">Jugar</button>
+		</div>
+		
+		<div id="profesiones" hidden>
+<div><button id="inicio" onclick="cargar('bombero')"><img id="img" src="bombero.png"><br>Jugar</button><br></div>
+<div>
+<button onclick="cargar('bombero')"><img src="bombero.png"><br>Bombero</button>
+<button onclick="cargar('botones')"><img src="botones.png"><br>Botones</button>
+<button onclick="cargar('mayordomo')"><img src="mayordomo.png"><br>Camarero</button>
+<button onclick="cargar('medico')"><img src="medico.png"><br>Médico</button>
+<button onclick="cargar('pintor')"><img src="pintor.png"><br>Pintor</button></div>
+
+	
+	</div>
+</div>
+
+</body>
+
+</html>

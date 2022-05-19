@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<style type="text/css">
+
+         button {background-image: linear-gradient(to right, #3CA55C 0%, #B5AC49  51%, #3CA55C  100%)}
+         button {
+            margin: 10px;
+            padding: 15px 45px;
+            text-align: center;
+            text-transform: uppercase;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: white;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+          
+          }
+
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+            color: #fff;
+            text-decoration: none;
+          }
+          #inicio{
+          	background-color: rgba(255, 255, 255, 0.8);
+          	width: 60%;
+          	margin: auto;
+          	font-size: 1.5rem;
+          	padding: 0.5rem;
+          	border-radius: 1rem;
+          }
+  h1{background-color: rgba(255,255,255,0.4);
+  	background-size: contain;
+  	border-radius: 1rem;
+  	font-size: 3rem;} 
+  	             @media only screen and (orientation:portrait) {
+        #video,#repetir,#avanzar,#inicio{ display:none; }
+        #aviso-movil-horizontal { 
+        	margin: 0 auto;
+        	width: 40%;
+          display:block;
+
+      font-size: 2rem;
+                text-align: center;
+                font-weight: bolder;}
+		     #juego{display:none;}    
+      
+    }
+
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+	    }      
+body{
+	background-image: url("recursos/fondo.jpg");
+background-size: cover;
+text-align: center;}</style>
+<script type="text/javascript">
+	function iniciar() {
+		document.getElementById("inicio").setAttribute("hidden","")
+		document.getElementById("video").removeAttribute("hidden")
+		document.getElementById("video").play()
+const audio = document.createElement("audio");
+audio.preload = "auto";
+audio.src = "recursos/eco2.mp3";
+audio.play()
+setTimeout(function a(){
+	document.getElementById("avanzar").removeAttribute("hidden")
+		document.getElementById("repetir").removeAttribute("hidden")
+
+},40000)
+		// body...
+	}
+	function reiniciar() {
+		 var video=document.getElementById("video")
+		video.currentTime = 0;
+video.play();
+		
+	}
+</script>
+<body>
+				<div style="position: absolute; top: 0px;">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+
+  
+    	    	  <div id="aviso-movil-horizontal" style="z-index:1">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img src="recursos/rotate.gif" style="
+    margin-left: -70%;
+"/></div><br>
+<h1>ENERGÍA EN LOS ECOSISTEMAS</h1>
+<div id="inicio">
+	<p>Toda la energía utilizada por los 
+seres vivos proviene del sol, ésta 
+energía ya no volverá a ser 
+utilizada por los seres vivos, por 
+eso se dice que la energía que 
+atraviesa un ecosistema es 
+unidireccional, es decir, fluye en 
+una sola dirección, constituyendo 
+así un ciclo abierto en el 
+ecosistema.</p>
+	<button onclick="iniciar()">Comenzar</button>
+</div>
+<video id="video" width="55%" src="recursos/video_2.mp4" preload='auto' hidden></video><br>
+<button id="avanzar" hidden="" onclick="window.location.assign('juego.html')">Avanzar</button>
+<button id="repetir" hidden="" onclick="reiniciar()">Repetir</button>
+</body>
+</html>

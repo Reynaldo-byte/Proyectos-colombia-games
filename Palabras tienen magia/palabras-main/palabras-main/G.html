@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<body>
+		<script src="script.js"></script>
+			<div style="position: absolute; top: 0px;background-color:transparent;">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>  <div id="aviso-movil-horizontal" style="z-index:1; margin:0 auto;width:80%;font-size:2.5rem;color:black;">
+			<p> <br><br>Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img width="100%" src="recursos/rotate.gif"/></div>
+	
+	<h1>Letra G</h1><br>
+	<h2>Gg</h2><br>
+			<div id="0"> 
+<button class="avanzar" onclick="avanzar(1)">Avanzar</button></div>
+	<br>
+	<div id="1" hidden>
+		<p>¿Cuál de estos objetos se escribe con G?</p>
+		<p><button class="button_imagen" onclick="comprobar('incorrecto',2)"><img src="recursos/raton (2).png"></button><button  class="button_imagen" onclick="comprobar('correcto',2)" id="correcto_1"><img src="recursos/gato.png"></button><button  class="button_imagen" onclick="comprobar('incorrecto',2)"><img src="recursos/estrella (2).png"></button></p>
+		<button class="avanzar" onclick="avanzar(2)" id="responder0" hidden>Avanzar</button>
+		<p id="incorrecto0" hidden>Intenta De Nuevo</p>
+	</div>
+	<div id="2" hidden>
+		<p>¿Cuál de estos objetos se escribe con G?</p>
+		<p><button  class="button_imagen" onclick="comprobar('correcto',3)" id="correcto_2"><img src="recursos/gorrion.png"></button><button  class="button_imagen" onclick="comprobar('incorrecto',3)"><img src="recursos/huevo.png"></button><button  class="button_imagen" onclick="comprobar('incorrecto',3)">
+			<img src="recursos/jaula.png"></button></p>
+		<button class="avanzar" onclick="avanzar(3)" id="responder1" hidden>Avanzar</button>
+		<br>
+		<p id="incorrecto1" hidden>Intenta De Nuevo</p>
+	</div>
+	<div id="3" hidden>
+		<p>¿Cuáles de estos objetos están bien escritos?</p>
+		<p><button  class="button_imagen" onclick="comprobar('correcto',4)" id="correcto_3"><img src="recursos/juego.png"><br>Juego</button><button  class="button_imagen" onclick="comprobar('incorrecto',4)"><img src="recursos/huevo.png"><br>guevo</button><button  class="button_imagen" onclick="comprobar('incorrecto',4)"><img src="recursos/karma.png"><br>Garma</button></p>
+	<button class="avanzar" onclick="avanzar(4)" id="responder2" hidden>Avanzar</button>
+		
+		<p id="incorrecto2" hidden>Intenta De Nuevo</p>
+	</div>
+	<div id="4" hidden>
+		<p>¿Cuáles de estos objetos están bien escritos?</p>
+		<p><button class="button_imagen_escritura" onclick="comprobar('incorrecto',5)"><img src="recursos/jurado.png"><br>Gurado</button><button class="button_imagen_escritura" onclick="comprobar('incorrecto',5)"><img src="recursos/hilo.png"><br>Gilo</button><button class="button_imagen_escritura" onclick="comprobar('correcto',5)" id="correcto_4"><img src="recursos/general.png"><br>General</button></p>
+		<button class="avanzar" onclick="avanzar(5)" id="responder3" hidden>Avanzar</button>
+		
+		<p id="incorrecto3" hidden>Intenta De Nuevo</p>
+	</div>
+		<div id="5" hidden>
+			<h3>Con o sin G</h3>
+		<p>La paloma huía del nido del _avilan</p>
+		<p><button class="con" onclick="comprobar('correcto',6)" id="correcto_5">Con G</button><button class="sin" onclick="comprobar('incorrecto',6)">Sin G</button></p>
+	<button class="avanzar" onclick="avanzar(6)" id="responder4" hidden>Avanzar</button>
+		
+		<p id="incorrecto4" hidden>Intenta De Nuevo</p>
+	</div>
+			<div id="6" hidden>
+			<h3>Con o sin G</h3>
+		<p>Eso es historia anti_üa.</p>
+		<p><button class="con" onclick="comprobar('correcto',7)" id="correcto_6">Con G</button><button class="sin" onclick="comprobar('incorrecto',7)">Sin G</button></p>
+	<button class="avanzar" onclick="avanzar(7)" id="responder5" hidden>Avanzar</button>
+			
+		<p id="incorrecto5" hidden>Intenta De Nuevo</p>
+	</div>
+	<div id="7" hidden> 
+		<h1>¡Muy bien!</h1><br>
+		<p>Hemos aprendido la letra Gg. Ahora practiquemos con nuestros compañeros nuevos ejercicios.</p>
+			<button onclick="window.location.replace('H.html');" class="avanzar">Iniciar de Nuevo</button><button onclick="window.location.reload();" class="avanzar">Repetir</button>
+	</div>
+	
+</body>
+</html>

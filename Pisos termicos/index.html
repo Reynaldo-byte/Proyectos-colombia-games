@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+</head>
+<style type="text/css">
+	 @media only screen and (orientation:portrait) {
+        #inicio { display:none; }
+				     #arrastrables { display:none; }
+        #aviso-movil-horizontal { 
+        	margin: 0 auto;
+        	width: 65%;
+          display:block;
+
+      font-size: 2rem;
+                text-align: center;
+                font-weight: bolder;}
+		     #juego{display:none;}    
+      
+    }
+
+
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+	    }
+</style>
+<body>
+	<div id="aviso-movil-horizontal" style="z-index:1">
+			<p> Para disfrutar de una mejor experiencia rota tu dispositivo</p>
+				<img src="recursos/rotate.gif"style="
+    margin-left: -20%;
+"/></div>
+	<div style="position: absolute; top: 0px;background-color:transparent">
+      <img src="recursos/img-foot.png" alt="logo: escuela nueva">
+    </div>
+	<h1>Pisos Térmicos</h1>
+	<div id="inicio">
+		<p>Los pisos térmicos, son un sistema  de medida que nos 
+permite definir la temperatura de una zona, de acuerdo a la 
+altura  sobre el nivel del mar en que se encuentre. Este  
+sistema, sólo se puede aplicar en el trópico americano,  debido 
+a sus características geográficas y atmosféricas.
+Dentro de los pisos térmicos se han definido cinco niveles 
+denominados cálido, templado, frió, páramo y glacial.
+Para profundizar sobre cada piso coloca de forma correcta la 
+información que le corresponde a cada uno de los pisos 
+térmicos.</p>
+<button onclick="window.location.assign('montana.html')">Comenzar</button>
+	</div>
+	
+
+
+</body>
+</html>

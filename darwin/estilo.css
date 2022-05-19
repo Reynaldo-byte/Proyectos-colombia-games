@@ -1,0 +1,93 @@
+@font-face {
+  font-family:Le chant des Albatros;
+ src: url('recursos/Le chant des Albatros.ttf');
+}
+h2,.titulo{
+  font-family: Le chant des Albatros;
+  font-size: 3.5rem;
+}
+button{
+  
+}
+body{
+  text-align: center;
+  background-image: url('recursos/fondo.png');
+  background-size: cover;
+  align-items: center;
+}
+#inicio{
+  margin-top:20%;
+}
+    #aviso-movil-horizontal { display: none; }
+    @media only screen and (orientation:portrait) {
+        #inicio,#buttons,#gifs,#texto { display:none; }
+        #aviso-movil-horizontal { z-index: 0;
+          display:block;
+      font-size: 1.5rem;
+                text-align: center;
+                font-weight: bolder;
+                margin: auto;
+                background-color: rgba(255, 255, 255, 0.3);
+                border-radius: 1rem;}
+                img{
+
+    margin-left: -20%;
+
+                }
+      
+    }
+    @media only screen and (orientation:landscape) {
+        #aviso-movil-horizontal { display:none; }
+    }
+
+         button {background-image: linear-gradient(to right, #1FA2FF 0%, #12D8FA  51%, #1FA2FF  100%)}
+         button {
+         
+            padding: 0.5rem;
+            text-align: center;
+            font-weight: bolder;
+            font-size: 2rem;
+            transition: 0.5s;
+            background-size: 200% auto;
+            color: black;            
+            box-shadow: 0 0 20px #eee;
+            border-radius: 10px;
+            
+          }
+
+          button:hover {
+            background-position: right center; /* change the direction of the change here */
+          
+
+          }
+#buttons button{
+
+
+  background-color: rgba(0, 0, 0, 0.3)!important;
+  color: white;
+}
+#buttons{
+    float: left;
+    width: 30%;
+
+}
+#gif{
+  margin-top:10%;
+  float: right;
+  width: 60%;
+ 
+}
+#buttons,#gif{
+ 
+}
+         
+#gifs{
+  padding:0.4rem;
+  width: 50%;
+}
+#texto{
+  padding: 0.2rem;
+    border-radius: 1rem;
+    font-size: 1.3rem;
+    background-color: rgba(255,255,255,.6);
+}
